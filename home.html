@@ -10,10 +10,9 @@ body {
 background-color: #f0f0f2;
 margin: 0;
 padding: 0;
-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        
+font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;        
 }
-div {
+main {
 width: 600px;
 margin: 5em auto;
 padding: 2em;
@@ -26,7 +25,7 @@ color: #38488f;
 text-decoration: none;
 }
 @media (max-width: 700px) {
-div {
+main {
 margin: 0 auto;
 width: auto;
 }
@@ -34,13 +33,19 @@ width: auto;
 </style>
 </head>
 <body>
-<div>
+<main>
 <h1>Twibbon Komunitas Badut Indonesia</h1>
-<p>This domain is for use in illustrative examples in
-documents. You may use this domain in literature without prior
-coordination or asking for permission.</p>
-<p><a href="https://www.iana.org/domains/example">More
-information...</a></p>
-</div>
+<p>
+<input type="file" id="fileInput" accept="image/*">
+</p>
+<p>
+<button class="btn" onclick="generateTwibbon()">Generate Twibbon</button>
+</p>
+<p>
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="300" height="300"></canvas>
+</p>
+<button class="btn" onclick="downloadImage()">Download Image</button>
+</main>
 </body>
 </html>
