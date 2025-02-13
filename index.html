@@ -59,18 +59,18 @@ width: auto;
 }
 }
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
 <main>
 <h1>Twibbon Komunitas Badut Indonesia</h1>
 <p>
-<label for="fileInput" class="btn">
+<label class="btn">
 <input type="file" id="fileInput" accept="image/*">
 Pilih Foto
 </label>
 <button class="btn" onclick="generateTwibbon()">Buat Twibbon</button>
 </p>
+<p id="filename"></p>
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="300" height="300"></canvas>
@@ -79,11 +79,16 @@ Pilih Foto
 </main>
 <script src="app.js"></script>
 <script>
-$('#fileInput').change(function() {
-  var i = $(this).prev('label').clone();
-  var file = $('#fileInput')[0].files[0].name;
-  $(this).prev('label').text(file);
-});
+var infoArea = document.getElementById( 'filename' );
+input.addEventListener( 'change', showFileName );
+function showFileName( event ) {
+// the change event gives us the input it occurred in 
+var input = event.srcElement;
+// the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
+var fileName = input.files[0].name;
+// use fileName however fits your app best, i.e. add it into a div
+infoArea.textContent = 'File name: ' + fileName;
+}
 </script>
 </body>
 </html>
