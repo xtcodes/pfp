@@ -79,9 +79,9 @@ Pilih Foto
 </main>
 <script src="app.js"></script>
 <script>
-$('#file-upload').change(function() {
+$('#fileInput').change(function() {
   var i = $(this).prev('label').clone();
-  var file = $('#file-upload')[0].files[0].name;
+  var file = $('#fileInput')[0].files[0].name;
   $(this).prev('label').text(file);
 });
 </script>
