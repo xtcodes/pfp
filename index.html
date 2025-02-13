@@ -59,6 +59,7 @@ width: auto;
 }
 }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
 <main>
@@ -77,5 +78,12 @@ Pilih Foto
 <button class="btn dl" onclick="downloadImage()">Download Image</button>
 </main>
 <script src="app.js"></script>
+<script>
+$('#file-upload').change(function() {
+  var i = $(this).prev('label').clone();
+  var file = $('#file-upload')[0].files[0].name;
+  $(this).prev('label').text(file);
+});
+</script>
 </body>
 </html>
