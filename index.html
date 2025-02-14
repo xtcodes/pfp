@@ -66,12 +66,11 @@ width: auto;
 <p>Ini adalah situs web tempat Anda dapat menambahkan foto ke bingkai.</p>
 <p>
 <label class="btn">
-<input type="file" id="fileInput" accept="image/*" onchange="loadFile(event)">
+<input type="file" id="fileInput" accept="image/*">
 Pilih Foto
 </label>
 <button class="btn" onclick="generateTwibbon()">Buat Twibbon</button>
 </p>
-<img id="output"/>
 <p id="filename"></p>
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
@@ -92,15 +91,6 @@ var fileName = input.files[0].name;
 // use fileName however fits your app best, i.e. add it into a div
 infoArea.textContent = 'File name: ' + fileName;
 }
-</script>
-<script>
-  var loadFile = function(event) {
-    var output = document.getElementById('output');
-    output.src = URL.createObjectURL(event.target.files[0]);
-    output.onload = function() {
-      URL.revokeObjectURL(output.src) // free memory
-    }
-  };
 </script>
 </body>
 </html>
