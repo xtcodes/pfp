@@ -75,10 +75,10 @@ width: auto;
 <p>Ini adalah situs web tempat Anda dapat menambahkan foto ke bingkai.</p>
 <p>
 <label class="btn">
-<input type="file" id="fileInput" accept="image/*">
+<input type="file" id="fileInput" oninput="checkInput()" accept="image/*">
 Pilih Foto
 </label>
-<button class="btn" id="gen" onclick="generateTwibbon()">Buat Twibbon</button>
+<button class="btn" id="gen" onclick="generateTwibbon()" disabled>Buat Twibbon</button>
 </p>
 <p id="filename"></p>
 <p>
@@ -108,6 +108,12 @@ createImg.addEventListener("click", () => {
 downloadImg.style.display = "inline-block"; 
 });
 </script>
-
+<script>
+function checkInput() {
+var input = document.getElementById('fileInput').value;
+var button = document.getElementById('gen');
+button.disabled = input === '';
+  }
+</script>
 </body>
 </html>
