@@ -78,14 +78,14 @@ width: auto;
 <input type="file" id="fileInput" accept="image/*">
 Pilih Foto
 </label>
-<button class="btn" onclick="generateTwibbon()">Buat Twibbon</button>
+<button class="btn" id="gT" onclick="generateTwibbon()">Buat Twibbon</button>
 </p>
 <p id="filename"></p>
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
-<button class="btn dl" onclick="downloadImage()">Download Image</button>
+<button class="btn dl" id="dL" onclick="downloadImage()">Download Image</button>
 </main>
 <script src="app.js"></script>
 <script>
@@ -102,7 +102,16 @@ infoArea.textContent = 'File name: ' + fileName;
 }
 </script>
 <script>
+var disableButton = (e) => {
+    $('#fileInput').prop('disabled', true);
+};
 
+var enableButton = (e) => {
+    $('#fileInput').prop('disabled', false);
+};
+
+$(document).on('click', '#gT', disableButton);
+$(document).on('click', '#dL', enableButton);
 </script>
 
 </body>
