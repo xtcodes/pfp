@@ -85,7 +85,7 @@ Pilih Foto
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
-<button class="btn dl" id="enable" onclick="downloadImage()">Download Image</button>
+<button class="btn dl" id="enable" onclick="downloadImage(this)">Download Image</button>
 </main>
 <script src="app.js"></script>
 <script>
@@ -102,19 +102,10 @@ infoArea.textContent = 'File name: ' + fileName;
 }
 </script>
 <script>
-const btn = document.getElementById("file");
-const enableBtn = document.getElementById("enable");
-const disableBtn = document.getElementById("disable");
-
-enableBtn.addEventListener("click", () => {
-btn.disabled = false;
-btn.textContent = "Pilih Foto";
-});
-
-disableBtn.addEventListener("click", () => {
-btn.disabled = true;
-btn.textContent = "Foto Dipilih";
-});
+function downloadImage(e) {
+  e.disabled = true;
+}
 </script>
+
 </body>
 </html>
