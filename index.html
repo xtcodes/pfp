@@ -70,18 +70,18 @@ width: auto;
 <h1>Twibbon KBI</h1>
 <p>Ini adalah situs web tempat Anda dapat menambahkan foto ke bingkai.</p>
 <p>
-<label class="btn">
+<label class="btn" id="file">
 <input type="file" id="fileInput" accept="image/*">
 Pilih Foto
 </label>
-<button class="btn" onclick="generateTwibbon()">Buat Twibbon</button>
+<button class="btn" id="disable" onclick="generateTwibbon()">Buat Twibbon</button>
 </p>
 <p id="filename"></p>
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
-<button class="btn dl" onclick="downloadImage()">Download Image</button>
+<button class="btn dl" id="enable" onclick="downloadImage()">Download Image</button>
 </main>
 <script src="app.js"></script>
 <script>
@@ -96,6 +96,21 @@ var fileName = input.files[0].name;
 // use fileName however fits your app best, i.e. add it into a div
 infoArea.textContent = 'File name: ' + fileName;
 }
+</script>
+<script>
+const btn = document.getElementById("file");
+const enableBtn = document.getElementById("enable");
+const disableBtn = document.getElementById("disable");
+
+enableBtn.addEventListener("click", () => {
+btn.disabled = false;
+btn.textContent = "Pilih Foto";
+});
+
+disableBtn.addEventListener("click", () => {
+btn.disabled = true;
+btn.textContent = "Foto Dipilih";
+});
 </script>
 </body>
 </html>
