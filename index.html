@@ -85,7 +85,7 @@ Pilih Foto
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
-<button class="btn dl" onclick="downloadImage(this)">Download Image</button>
+<button class="btn dl" onclick="downloadImage()">Download Image</button>
 </main>
 <script src="app.js"></script>
 <script>
@@ -102,9 +102,7 @@ infoArea.textContent = 'File name: ' + fileName;
 }
 </script>
 <script>
-function downloadImage(e) {
-  e.disabled = true;
-}
+
 </script>
 
 </body>
