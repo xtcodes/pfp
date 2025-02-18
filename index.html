@@ -114,6 +114,11 @@ downloadImg.style.display = "inline-block";
 });
 </script>
 <script>
+function checkInput() {
+var input = document.getElementById('fileInput').value;
+var button = document.getElementById('gen');
+button.disabled = input === '';
+}
 </script>
 </body>
 </html>
