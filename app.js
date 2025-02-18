@@ -133,9 +133,3 @@ link.download = 'twibbon.png';
 link.href = canvas.toDataURL('image/png');
 link.click();
 }
-
-function checkInput() {
-var input = document.getElementById('fileInput').value;
-var button = document.getElementById('gen');
-button.disabled = input === '';
-}
