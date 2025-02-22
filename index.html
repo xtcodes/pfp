@@ -82,18 +82,21 @@ width: auto;
 <p>Ini adalah situs web tempat Anda dapat menambahkan foto ke bingkai.</p>
 <p>
 <label class="btn">
-<input type="file" id="fileInput" oninput="checkInput()" accept="image/*">
+<input type="file" id="fileInput" onchange="showImage()" accept="image/*">
 Pilih Foto
 </label>
-<button class="btn" id="gen" onclick="generateTwibbon()" disabled>Buat Twibbon</button>
+<button class="btn" id="gen" data-micromodal-trigger="modal-1" onclick="generateTwibbon()" disabled>Buat Twibbon</button>
 </p>
 <p id="filename"></p>
+<p><img src="" alt=""></p>
+<!--
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
+-->
 <button class="btn dl" id="dl" onclick="downloadImage()" style="display: none;">Download Image</button>
-<button class="btn" data-micromodal-trigger="modal-1">Tutorial</button>
+<!-- <button class="btn" data-micromodal-trigger="modal-1">Tutorial</button> -->
 <button class="btn" id="shared">Share</button>
 </main>
 <script src="app.js"></script>
@@ -126,7 +129,19 @@ var button = document.getElementById('gen');
 button.disabled = input === '';
 }
 </script>
+<script>
+const imageUploader = document.querySelector("fileInput");
+const imagePreview = document.querySelector("img");
 
+function showImage() {
+let reader = new FileReader();
+reader.readAsDataURL(imageUploader.files[0]);
+reader.onload = function(e) {
+imagePreview.classList.add("show");
+imagePreview.src = e.target.result;
+};
+}
+</script>
 <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
 <div class="modal__overlay" tabindex="-1" data-micromodal-close>
 <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
@@ -138,6 +153,10 @@ Cara Membuat Bingkai
 </header>
 <div class="modal-content-content">
 <div class="modal__content">
+<p>
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="500" height="500"></canvas>
+</p>
 <ol>
 <li>Pilih foto terbaik Anda.</li>
 <li>Klik "Buat Twibbon".</li>
