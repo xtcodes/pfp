@@ -120,20 +120,7 @@ infoArea.textContent = 'File name: ' + fileName;
 }
 </script>
 -->
-<script>
-const createImg = document.getElementById("gen");
-const downloadImg = document.getElementById("dl"); 
-createImg.addEventListener("click", () => { 
-downloadImg.style.display = "inline-block"; 
-});
-</script>
-<script>
-function checkInput() {
-var input = document.getElementById('fileInput').value;
-var button = document.getElementById('gen');
-button.disabled = input === '';
-}
-</script>
+
 <script>
 const imageUploader = document.querySelector("fileInput");
 const imagePreview = document.querySelector("img");
