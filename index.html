@@ -89,7 +89,7 @@ Pilih Foto
 </p>
 <p id="filename"></p>
 <p>
-<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<!-- <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas> -->
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
 <button class="btn dl" id="dl" onclick="downloadImage()" style="display: none;">Download Image</button>
@@ -138,7 +138,10 @@ Cara Membuat Bingkai
 </header>
 <div class="modal-content-content">
 <div class="modal__content">
-<p><canvas id="displayCanvas" width="500" height="500"></canvas></p>
+<p>
+<canvas id="displayCanvas" width="500" height="500"></canvas>
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+</p>
 <ol>
 <li>Pilih foto terbaik Anda.</li>
 <li>Klik "Buat Twibbon".</li>
