@@ -96,7 +96,7 @@ Pilih Foto
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
 <p>
-<button class="btn dl" onclick="downloadImage()">Download Image</button>
+<button class="btn dl" id="dl" onclick="downloadImage()">Download Image</button>
 <button class="btn" data-micromodal-trigger="modal-1">Tutorial</button>
 <button class="btn" id="shared">Share</button>
 </p>
@@ -111,6 +111,14 @@ var input = document.getElementById('fileInput').value;
 var button = document.getElementById('gen');
 button.disabled = input === '';
 }
+</script>
+
+<script>
+const showButton = document.getElementById("gen");
+const downLoad = document.getElementById("dl"); 
+showButton.addEventListener("click", () => { 
+downLoad.style.display = "inline-block"; 
+});
 </script>
   
 <script>
