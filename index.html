@@ -85,15 +85,15 @@ width: auto;
 <input type="file" id="fileInput" oninput="checkInput()" accept="image/*">
 Pilih Foto
 </label>
-<button class="btn" id="gen" onclick="generateTwibbon()" data-micromodal-trigger="modal-1" disabled>Buat Twibbon</button>
+<button class="btn" id="gen" onclick="generateTwibbon()" disabled>Buat Twibbon</button>
 </p>
 <p id="filename"></p>
 <p>
-<!-- <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas> -->
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
 <button class="btn dl" id="dl" onclick="downloadImage()" style="display: none;">Download Image</button>
-<!-- <button class="btn" data-micromodal-trigger="modal-1">Tutorial</button> -->
+<button class="btn" data-micromodal-trigger="modal-1">Tutorial</button>
 <button class="btn" id="shared">Share</button>
 </main>
 <script src="app.js"></script>
@@ -138,15 +138,12 @@ Cara Membuat Bingkai
 </header>
 <div class="modal-content-content">
 <div class="modal__content">
-<p>
-<canvas id="displayCanvas" width="500" height="500"></canvas>
-<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
-</p>
 <ol>
 <li>Pilih foto terbaik Anda.</li>
 <li>Klik "Buat Twibbon".</li>
 <li>Ukuran dan sesuaikan foto Anda dengan 2 jari. </li>
 <li>Klik "Download Image"</li>
+<li>Bagikan atau share ke media sosial Anda.</li>
 </ol>
 </div>
 <footer class="modal__footer">
