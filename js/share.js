@@ -1,6 +1,8 @@
 document.getElementById("shared").addEventListener("click", () => {
-alert("Bagikan Twibbon ini ke media sosial Anda?");
-
+// alert("Bagikan Twibbon ini ke media sosial Anda?");
+await Prompts.alert("Bagikan Twibbon ini ke media sosial Anda?");
+console.log("Alert closed");
+  
 const dataUrl = canvas.toDataURL(); 
 fetch(dataUrl)
 .then(res => res.blob())
