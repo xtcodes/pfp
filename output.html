@@ -51,7 +51,7 @@ background: url(upload.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 }
-/*
+
 .image-upload > input {
 display: none;
 }
@@ -59,32 +59,34 @@ display: none;
 width: 100%;
 cursor: pointer;
 }
-  */
+
 </style>
 </head>
 <body>
 <main>
 <h2>Twibbon Komunitas Badut Indonesia</h2>
 <p>
-<!--
 <div class="image-upload">
 <label for="fileInput">
-<img src="upload.jpg"/>
+<!--<img src="upload.jpg"/>-->
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="500" height="500"></canvas>
 </label>
 <input id="fileInput" type="file" accept="image/*">
 </div>
--->
+<!--
 <input type="file" id="fileInput" accept="image/*">
+-->
 </p>
 <p>
 <button class="btn" onclick="generateTwibbon()">Generate Twibbon</button>
 </p>
-
+<!--
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
-
+-->
 <p><button class="btn" onclick="downloadImage()">Download Image</button></p>
 </main>
  
