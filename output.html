@@ -88,7 +88,7 @@ cursor: pointer;
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </label>
-<input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
+<input id="fileInput" type="file" accept="image/*">
 </div>
 <!--
 <input type="file" id="fileInput" accept="image/*">
@@ -96,8 +96,8 @@ cursor: pointer;
 </p>
  
 <p>
-<button class="btn" onclick="generateTwibbon()">Buat Twibbon</button>
-<button class="btn dl" id="dl" onclick="downloadImage()" disabled>Unduh Twibbon</button>
+<button class="btn" id="gen" onclick="generateTwibbon()">Buat Twibbon</button>
+<button class="btn dl" id="dl" onclick="downloadImage()" style="display: none;">Unduh Twibbon</button>
 </p>
  
 <!--
@@ -246,11 +246,11 @@ link.click();
 }
 </script>
 <script>
-function checkInput() {
-var input = document.getElementById('fileInput').value;
-var button = document.getElementById('dl');
-button.disabled = input === '';
-}
+const clickButton = document.getElementById("gen");
+const downLoad = document.getElementById("dl"); 
+clickButton.addEventListener("click", () => { 
+downLoad.style.display = "inline-block"; 
+});
 </script>
 </body>
 </html>
