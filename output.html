@@ -29,8 +29,8 @@ background-color: #0056b3;
 }
 canvas {
 border: 1px solid #ccc;
-width: 300px;  /* Display size */
-height: 300px; /* Display size */
+width: 500px;  /* Display size */
+height: 500px; /* Display size */
 }
 </style>
 </head>
@@ -41,14 +41,15 @@ height: 300px; /* Display size */
 <input type="file" id="fileInput" accept="image/*">
 </p>
 <p>
-<button class="btn" onclick="generateTwibbon()">Generate Twibbon</button>
+<button class="btn" data-micromodal-trigger="modal-1" onclick="generateTwibbon()">Generate Twibbon</button>
 </p>
+<!--
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="300" height="300"></canvas>
 </p>
 <button class="btn" onclick="downloadImage()">Download Image</button>
-
+-->
 
 <script>
 let img = new Image();
@@ -204,5 +205,32 @@ console.log("micromodal error: ", e);
 }  
 });
 </script>
+
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+<header class="modal__header">
+<h2 class="modal__title">
+Twibbon
+</h2>
+<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+</header>
+<div class="modal-content-content">
+<div class="modal__content">
+<p>
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="500" height="500"></canvas>
+</p>
+<button class="btn" onclick="downloadImage()">Download Image</button>
+</div>
+<footer class="modal__footer">
+<button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+<button class="external" data-micromodal-trigger="modal-1">Open Modal Dialog</button>
 </body>
 </html>
