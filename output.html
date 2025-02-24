@@ -32,11 +32,14 @@ canvas {
 border: 1px solid #ccc;
 width: 500px;  /* Display size */
 height: 500px; /* Display size */
+border-radius: 50%;
+display: block;
 }
 img, canvas {
 width: 100%;
 height: auto;
 }
+/*
 .image-upload > input {
 display: none;
 }
@@ -44,20 +47,22 @@ display: none;
 width: 100%;
 cursor: pointer;
 }
+  */
 </style>
 </head>
 <body>
 <div class="container">
 <h2>Twibbon Komunitas Badut Indonesia</h2>
 <p>
+<!--
 <div class="image-upload">
 <label for="fileInput">
 <img src="upload.jpg"/>
 </label>
 <input id="fileInput" type="file" accept="image/*">
 </div>
-
-<!-- <input type="file" id="fileInput" accept="image/*"> -->
+-->
+<input type="file" id="fileInput" accept="image/*">
 </p>
 <p>
 <button class="btn" onclick="generateTwibbon()">Generate Twibbon</button>
