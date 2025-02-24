@@ -97,7 +97,7 @@ cursor: pointer;
  
 <p>
 <button class="btn" onclick="generateTwibbon()">Buat Twibbon</button>
-<button class="btn dl" onclick="downloadImage()">Unduh Twibbon</button>
+<button class="btn dl" id="dl" onclick="downloadImage()">Unduh Twibbon</button>
 </p>
  
 <!--
@@ -245,5 +245,13 @@ link.href = canvas.toDataURL('image/png');
 link.click();
 }
 </script>
+<script>
+document.getElementById("dl").onclick = function(e) {
+if (document.getElementById("fileInput").value == "") {
+e.preventDefault();
+alert("Gambar kosong!.");
+}
+} 
+ </script>
 </body>
 </html>
