@@ -51,7 +51,14 @@ cursor: pointer;
 <div class="container">
 <h2>Twibbon Komunitas Badut Indonesia</h2>
 <p>
-<input type="file" id="fileInput" accept="image/*">
+<div class="image-upload">
+<label for="file-input">
+<img src="uploaad.jpg"/>
+</label>
+<input id="fileInput" type="file" accept="image/*">
+</div>
+
+<!-- <input type="file" id="fileInput" accept="image/*"> -->
 </p>
 <p>
 <button class="btn" data-micromodal-trigger="modal-1" onclick="generateTwibbon()">Generate Twibbon</button>
