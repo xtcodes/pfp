@@ -77,7 +77,9 @@ cursor: pointer;
 </head>
 <body>
 <main>
+ 
 <h2>Twibbon Komunitas Badut Indonesia</h2>
+ 
 <p>
 <div class="image-upload">
 <label for="fileInput">
@@ -91,16 +93,18 @@ cursor: pointer;
 <input type="file" id="fileInput" accept="image/*">
 -->
 </p>
+ 
 <p>
 <button class="btn" onclick="generateTwibbon()">Buat Twibbon</button>
+<button class="btn dl" onclick="downloadImage()">Unduh Twibbon</button>
 </p>
+ 
 <!--
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
 -->
-<p><button class="btn" onclick="downloadImage()">Unduh Twibbon</button></p>
 </main>
  
 <script>
