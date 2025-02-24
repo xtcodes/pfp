@@ -7,14 +7,28 @@
 <link rel="stylesheet" href="css/dialog.css">
 <style>
 body {
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-background-color: #ffffff;
+background-color: #f0f0f2;
+margin: 0;
+padding: 0;
+font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.container {
-text-align: center;
+main {
+width: 600px;
+margin: 5em auto;
+padding: 2em;
+background-color: #fdfdff;
+border-radius: 0.5em;
+box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+}
+a:link, a:visited {
+color: #38488f;
+text-decoration: none;
+}
+@media (max-width: 700px) {
+main {
+margin: 0 auto;
+width: auto;
+}
 }
 .btn {
 padding: 10px 20px;
@@ -51,7 +65,7 @@ cursor: pointer;
 </style>
 </head>
 <body>
-<div class="container">
+<main>
 <h2>Twibbon Komunitas Badut Indonesia</h2>
 <p>
 <!--
@@ -72,7 +86,8 @@ cursor: pointer;
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
 <button class="btn" onclick="downloadImage()">Download Image</button>
-
+</main>
+ 
 <script>
 let img = new Image();
 let frameImg = new Image();
