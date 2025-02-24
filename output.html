@@ -94,7 +94,7 @@ cursor: pointer;
 <input type="file" id="fileInput" accept="image/*">
 -->
 </p>
- 
+<p id="data"></p> 
 <p>
 <button class="btn" id="gen" onclick="generateTwibbon()" disabled>Buat Twibbon</button>
 <button class="btn dl" id="dl" onclick="downloadImage()" style="display: none;">Unduh Twibbon</button>
@@ -257,6 +257,17 @@ function checkInput() {
 var input = document.getElementById('fileInput').value;
 var button = document.getElementById('gen');
 button.disabled = input === '';
+}
+</script>
+<script>
+var input = document.getElementById( 'fileInput' );
+var infoArea = document.getElementById( 'data' );
+input.addEventListener( 'change', showFileName );
+
+function showFileName( event ) {
+var input = event.srcElement;
+var fileName = input.files[0].name;
+infoArea.textContent = 'File name: ' + fileName;
 }
 </script>
 </body>
