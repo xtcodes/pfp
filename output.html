@@ -97,13 +97,14 @@ cursor: pointer;
 <p>
 <button class="btn" id="gen" onclick="generateTwibbon()" disabled>Buat Twibbon</button>
 <button class="btn dl" id="dl" onclick="downloadImage()" style="display: none;">Unduh Twibbon</button>
+<button class="btn" id="shared">Bagikan</button>
 </p>
  
 <p>
 <strong>Catatan:</strong> Aplikasi ini hanya berjalan di browser Anda. Aplikasi ini tidak akan menyimpan gambar atau data apa pun.
 </p>
 </main>
- 
+<script src="js/share.js"></script> 
 <script>
 let img = new Image();
 let frameImg = new Image();
