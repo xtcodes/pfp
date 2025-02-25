@@ -99,8 +99,8 @@ cursor: pointer;
 <button class="btn dl" id="dl" onclick="downloadImage()" style="display: none;">Unduh Twibbon</button>
 </p>
  
-<p id="note">
-<!-- <strong>Catatan:</strong> Aplikasi ini hanya berjalan di browser Anda. Aplikasi ini tidak akan menyimpan gambar atau data apa pun. -->
+<p>
+<strong>Catatan:</strong> Aplikasi ini hanya berjalan di browser Anda. Aplikasi ini tidak akan menyimpan gambar atau data apa pun.
 </p>
 </main>
  
@@ -241,11 +241,7 @@ link.href = canvas.toDataURL('image/png');
 link.click();
 }
 </script>
-<script>
-function generateTwibbon() {
-document.getElementById("note").innerHTML = "Hello World!";
-}
-</script>
+
 <script>
 const clickButton = document.getElementById("gen");
 const downLoad = document.getElementById("dl"); 
@@ -253,6 +249,7 @@ clickButton.addEventListener("click", () => {
 downLoad.style.display = "inline-block"; 
 });
 </script>
+ 
 <script>
 function checkInput() {
 var input = document.getElementById('fileInput').value;
@@ -260,6 +257,7 @@ var button = document.getElementById('gen');
 button.disabled = input === '';
 }
 </script>
+ 
 <script>
 var input = document.getElementById( 'fileInput' );
 var infoArea = document.getElementById( 'data' );
