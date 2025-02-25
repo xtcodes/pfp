@@ -99,8 +99,8 @@ cursor: pointer;
 <button class="btn dl" id="dl" onclick="downloadImage()" style="display: none;">Unduh Twibbon</button>
 </p>
  
-<p>
-<strong>Catatan:</strong> Aplikasi ini hanya berjalan di browser Anda. Aplikasi ini tidak akan menyimpan gambar atau data apa pun.
+<p id="note">
+<!-- <strong>Catatan:</strong> Aplikasi ini hanya berjalan di browser Anda. Aplikasi ini tidak akan menyimpan gambar atau data apa pun. -->
 </p>
 </main>
  
@@ -235,6 +235,8 @@ return Math.sqrt(dx * dx + dy * dy);
 }
 
 function downloadImage() {
+document.getElementById("hiddentext").innerHTML = "Hello World!";
+}
 const link = document.createElement('a');
 link.download = 'twibbon.png';
 link.href = canvas.toDataURL('image/png');
