@@ -235,12 +235,12 @@ return Math.sqrt(dx * dx + dy * dy);
 }
 
 function downloadImage() {
-document.getElementById("hiddentext").innerHTML = "Hello World!";
-}
 const link = document.createElement('a');
 link.download = 'twibbon.png';
 link.href = canvas.toDataURL('image/png');
 link.click();
+}
+document.getElementById("note").innerHTML = "Hello World!";
 }
 </script>
 <script>
