@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Twibbon KBI</title>
 <link rel="stylesheet" href="css/dialog.css">
+<link rel="stylesheet" href="css/button.css">
 <link rel="icon" type="image/x-icon" href="favicon.png">
 <style>
 body {
@@ -27,32 +28,6 @@ box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
 a:link, a:visited {
 color: #38488f;
 text-decoration: none;
-}
-@media (max-width: 700px) {
-main {
-margin: 0 auto;
-width: auto;
-}
-}
-.btn {
-display: inline-block;
-padding: 6px 12px;
-margin-bottom: 0;
-font-size: 14px;
-font-weight: 400;
-line-height: 1.42857143;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
-cursor: pointer;
-background-image: none;
-border: 1px solid transparent;
-border-radius: 4px;
-}
-.btn-default {
-color: #333;
-background-color: #fff;
-border-color: #ccc;
 }
 .dl {
 background-color: #007bff;
@@ -82,6 +57,12 @@ color: #333;
 background-color: #e6e6e6;
 box-shadow: 0 0 10px 0 #ccc;
 }
+@media (max-width: 700px) {
+main {
+margin: 0 auto;
+width: auto;
+}
+}
 </style>
 </head>
 <body>
@@ -104,7 +85,7 @@ box-shadow: 0 0 10px 0 #ccc;
 </p>
 <p id="data"></p> 
 <p>
-<button class="btn" id="gen" onclick="generateTwibbon()" disabled>Buat Twibbon</button>
+<button class="btn" role="button" id="gen" onclick="generateTwibbon()" disabled>Buat Twibbon</button>
 <button class="btn dl" id="dl" onclick="downloadImage()" style="display: none;">Unduh Twibbon</button>
 <button class="btn" id="shared">Bagikan</button>
 </p>
