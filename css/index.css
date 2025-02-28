@@ -63,34 +63,28 @@ vertical-align: middle;
 white-space: nowrap;
 word-wrap: break-word;
 }
-
 .btn:hover {
 background-color: #F3F4F6;
 text-decoration: none;
 transition-duration: 0.1s;
 }
-
 .btn:disabled {
 background-color: #FAFBFC;
 border-color: rgba(27, 31, 35, 0.15);
 color: #959DA5;
 cursor: default;
 }
-
 .btn:active {
 background-color: #EDEFF2;
 box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
 transition: none 0s;
 }
-
 .btn:focus {
 outline: 1px transparent;
 }
-
 .btn:before {
 display: none;
 }
-
 .btn:-webkit-details-marker {
 display: none;
 }
@@ -121,29 +115,30 @@ touch-action: manipulation;
 vertical-align: middle;
 white-space: nowrap;
 }
-
 .dl:focus:not(:focus-visible):not(.focus-visible) {
 box-shadow: none;
 outline: none;
 }
-
 .dl:hover {
 background-color: #2c974b;
 }
-
 .dl:focus {
 box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
 outline: none;
 }
-
 .dl:disabled {
 background-color: #94d3a2;
 border-color: rgba(27, 31, 35, .1);
 color: rgba(255, 255, 255, .8);
 cursor: default;
 }
-
 .dl:active {
 background-color: #298e46;
 box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+@media (max-width: 700px) {
+main {
+margin: 0 auto;
+width: auto;
+}
 }
