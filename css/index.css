@@ -21,7 +21,7 @@ width: 100%;
 height: auto;
 }
 #displayCanvas {
-background: url(placeholder.png);
+background: url(/placeholder.png);
 background-repeat: no-repeat;
 background-size: cover;
 }
