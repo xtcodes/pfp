@@ -33,7 +33,7 @@
 <p id="data"></p> 
 <p>
 <button class="btn" role="button" onclick="generateTwibbon()">Buat Twibbon</button>
-<button class="dl" role="button" onclick="downloadImage()">Unduh Twibbon</button>
+<button class="dl" role="button" id="dl" onclick="downloadImage()">Unduh Twibbon</button>
 <button class="btn" role="button" id="shared">Bagikan</button>
 </p>
  
@@ -66,12 +66,26 @@ button.disabled = input === '';
 var input = document.getElementById( 'fileInput' );
 var infoArea = document.getElementById( 'data' );
 input.addEventListener( 'change', showFileName );
-
 function showFileName( event ) {
 var input = event.srcElement;
 var fileName = input.files[0].name;
 infoArea.textContent = 'File name: ' + fileName;
 }
+</script>
+
+<script>
+let clickButton = document.getElementById("dl");
+let fileInput = document.getElementById("fileInput");
+fileInput.addEventListener("change", function () {      
+// check if the file is selected or not
+if (fileInput.files.length == 0) {
+clickButton.disabled = true;
+clickButton.opacity = 0.3;
+} else {
+clickButton.disabled = false;
+clickButton.style.opacity = 1;
+}
+});
 </script>
 </body>
 </html>
