@@ -41,7 +41,7 @@ displayCanvas.addEventListener('touchend', stopDragging);
 displayCanvas.addEventListener('touchmove', handlePinch);
 } else {
 // alert('Please upload an image file.');
-  output.innerHTML += "Please, select a file!";
+  output.innerHTML += "Silahkan unggah file gambar!";
 }
 }
 
