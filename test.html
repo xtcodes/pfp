@@ -36,11 +36,41 @@ width: auto;
 </head>
 
 <body>
+<div class="wrapper">
+<form class="steps">
 <div>
-<h1>Example Domain</h1>
-<p>This domain is for use in illustrative examples in documents. You may use this
-domain in literature without prior coordination or asking for permission.</p>
-<p><a href="https://www.iana.org/domains/example">More information...</a></p>
+<div class="step1" data-bind="fadeVisible: step() == 1, css: {current : step() == 1}, hasfocus: step() == 1">
+<label>What's your name?</label>
+<input type="text" name="name" data-bind="value: name">
+</div>
+<div class="step2" data-bind="fadeVisible: step() == 2, css: {current : step() == 2}, hasfocus: step() == 2">
+<label>What's your e-mail?</label>
+<input type="email" name="email" data-bind="value: email">
+</div>
+<div class="step3" data-bind="fadeVisible: step() == 3, css: {current : step() == 3}, hasfocus: step() == 3">
+<label>Can I call you?</label>
+<input type="phone" name="phone" data-bind="value: phone">
+</div>
+<div class="step4" data-bind="fadeVisible: step() == 4, css: {current : step() == 4}, hasfocus: step() == 4">
+<label>What do you want to talk about?</label>
+<input type="text" name="subject" data-bind="value: subject">
+</div>
+<div class="step5" data-bind="fadeVisible: step() == 5, css: {current : step() == 5}, hasfocus: step() == 5">
+<label>Thank you, <span data-bind="text: name"></span>!<br>
+Soon we'll be in touch. </label>
+<br>
+</div>
+</div>
+<div class="progress">
+<div class="input-bar"></div>
+<div class="progress-bar"></div>
+</div>
+<div class="steps-navigation">
+<button class="prev" data-bind="visible: step() > 1, click: prev">previous</button>
+<button class="next" data-bind="visible: step() < 4, click: next">next</button>
+<button id="done" data-bind="visible: step() == 4, click: next">done</button>
+</div>
+</form>
 </div>
 </body>
 </html>
