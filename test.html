@@ -13,7 +13,7 @@ margin: 0;
 padding: 0;
 font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;       
 }
-main {
+main, .content, .step {
 width: 600px;
 margin: 5em auto;
 padding: 2em;
@@ -37,26 +37,33 @@ width: auto;
 
 <body>
 <main>
-<div id="step1">
+<div id="step1" class="step">
+<div class="content">
 <p>Olá! Eu sou a <strong>Lílian</strong>.
 </p>
 <p>Estou aqui para apresentar uma novidade. </p>
 <p>Vem comigo!</p>
 <p><a href="#" class="btn" id="gotoStep2">Vamos nessa!</a></p>
 </div>
+</div>
   
-<div id="step2">
+<div id="step2" class="step">
+<div class="content">
 <p>Temos um novo recurso chamado <strong>Comunicados</strong>.</p>
 <p>Comunicados são avisos importantes que merecem sua atenção.</p>
 <p>Eles vão aparecer em <strong>Novidades</strong> e em <strong>Grupos</strong> também.</p>
 <p><a href="#" id="gotoStep3" class="btn">Entendi!</a></p>
 </div>
-
-<div id="step3">
+</div>
+  
+<div id="step3" class="step">
+<div class="content">
 <p>Para ver todos os Murais de Comunicados que você participa, clique em <strong>Grupos</strong> e na aba <strong>Murais de Comunicados</strong>.</p>
 <p>Se tiver mais dúvidas, é só falar com a gente!</p>
 <p><a href="#" id="gotoStep3" class="btn">Obrigado!</a></p>
 </div>
+</div>
+  
 </main>
 </body>
 <script>
