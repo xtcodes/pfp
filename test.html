@@ -143,4 +143,20 @@ $("#step3").show();
 })
 });
 </script>
+
+<script>
+let inputs = document.querySelectorAll('input[type="file"]');
+[].forEach.call(inputs, function (elem) {
+elem.addEventListener("change", (e) => {
+let fileName = elem.value.replace(/^.*\\/, "");
+if (fileName != "") {
+elem.nextElementSibling.innerText = fileName;
+elem.parentElement.classList.add("has_file");
+} else {
+elem.nextSibling.innerText = "Загрузить файл";
+elem.parentElement.classList.remove("has_file");
+}
+});
+});
+</script>
 </html>
