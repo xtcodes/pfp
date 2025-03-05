@@ -25,6 +25,10 @@ a:link, a:visited {
 color: #38488f;
 text-decoration: none;
 }
+img, canvas {
+width: 100%;
+height: auto;
+}
 @media (max-width: 700px) {
 main {
 margin: 0 auto;
@@ -39,9 +43,8 @@ width: auto;
 <main>
 <div id="step1" class="">
 <div class="">
-<p>Olá! Eu sou a <strong>Lílian</strong>.
-</p>
-<p>Estou aqui para apresentar uma novidade. </p>
+<p>Unggah gambar terbaik Anda.</p>
+<p><input type="file" id="fileInput" accept="image/*"></p>
 <p>Vem comigo!</p>
 <p><a href="#" class="btn" id="gotoStep2">Vamos nessa!</a></p>
 </div>
