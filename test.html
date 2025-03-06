@@ -110,9 +110,8 @@ width: auto;
 
 <body>
 <main>
-<div id="step1" class="">
-<ol>
-<li>Unggah gambar terbaik Anda dibawah ini.</li>
+<div id="step1">
+<p>1. Unggah gambar terbaik Anda dibawah ini.</p>
 <p>
 <!--<input type="file" id="fileInput" accept="image/*">-->
 <label class="input-file">
@@ -120,29 +119,25 @@ width: auto;
 <span>Letakkan berkas di sini atau klik untuk mengunggah.</span>
 </label>
 </p>
-<li>Klik "Lanjutkan"</li>
+<p>2. Klik "Lanjutkan".</p>
 <p><button class="btn" id="gotoStep2" onclick="generateTwibbon()">LANJUTKAN</button></p>
-</ol>
 </div>
   
-<div id="step2" class="">
-<div class="">
+<div id="step2">
 <p id="output" style="color:red;"></p>
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
+<p>3. Unduh gambar profil baru Anda!</p>
 <p>
 <button class="btn" id="gotoStep3" onclick="downloadImage()">Unduh Twibbon</button>
 </p>
 </div>
-</div>
   
-<div id="step3" class="">
-<div class="">
-<p>Bagikan ke media sosial Anda.</p>
+<div id="step3">
+<p>4. Bagikan ke media sosial Anda.</p>
 <p><button class="btn" id="shared">Bagikan</button></p>
-</div>
 </div>
   
 </main>
