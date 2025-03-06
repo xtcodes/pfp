@@ -75,7 +75,24 @@ cursor: pointer;
 .input-file span {
 cursor: pointer;
 }
-
+.btn {
+display: inline-block;
+padding: 6px 12px;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+border: 1px solid #adadad;
+background: #fff;
+border-radius: 4px;
+}           
+.btn:hover {
+color: #333;
+background-color: #e6e6e6;
+}
 @media (max-width: 700px) {
 main {
 margin: 0 auto;
@@ -110,7 +127,7 @@ width: auto;
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
 <p>
-<button class="dl" role="button" id="gotoStep3" onclick="downloadImage()">Unduh Twibbon</button>
+<button class="btn" id="gotoStep3" onclick="downloadImage()">Unduh Twibbon</button>
 </p>
 </div>
 </div>
@@ -119,7 +136,7 @@ width: auto;
 <div class="">
 <p id="output" style="color:red;"></p>
 <p>Bagikan ke media sosial Anda.</p>
-<p><button class="btn" role="button" id="shared">Bagikan</button></p>
+<p><button class="btn" id="shared">Bagikan</button></p>
 </div>
 </div>
   
