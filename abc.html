@@ -111,11 +111,10 @@ width: auto;
 <!--<p><input id="fileInput" type="file" accept="image/*"></p>-->
 <div class="image-upload">
 <label for="fileInput">
-<img src="placeholder.png"/>
+<img id="pic" src="placeholder.png"/>
 </label>
 <input id="fileInput" type="file" accept="image/*">
 </div>
-<p><img id="img"></p>
 </div>
 <div class="stepPage" id="stepPage2">
 <p id="output" style="color:red;"></p>
@@ -212,7 +211,7 @@ document.getElementById("fileInput").onchange = function() {
 // create Blob-URL for File (=Blob) object
 var url = (URL || webkit).createObjectURL(this.files[0]);  
 // set Blob-URL as image source:
-document.getElementById("img").src = url;
+document.getElementById("pic").src = url;
 };
 </script>
 </body>
