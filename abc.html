@@ -104,7 +104,13 @@ width: auto;
 <p>Mari bersatu dalam foto profil kita untuk menyoroti tujuan tersebut.</p> 
 <div class="stepPage" id="stepPage1">
 <p>Unggah gambar terbaik Anda dibawah ini.</p>
-<p><input id="fileInput" type="file" accept="image/*"></p>
+<!--<p><input id="fileInput" type="file" accept="image/*"></p>-->
+<div class="image-upload">
+<label for="fileInput">
+<img src="upload.jpg"/>
+</label>
+<input id="fileInput" type="file" accept="image/*">
+</div>
 </div>
 <div class="stepPage" id="stepPage2">
 <p id="output" style="color:red;"></p>
