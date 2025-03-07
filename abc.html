@@ -68,7 +68,10 @@ width: auto;
 <p><input id="fileInput" type="file" accept="image/*"></p>
 </div>
 <div class="stepPage" id="stepPage2">
-wow, here's a new step
+<p>
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="500" height="500"></canvas>
+</p>
 </div>
 <div class="stepPage" id="stepPage3">
 another one
@@ -81,6 +84,8 @@ and here's the last step. the progress bar is responsive btw
 <button id="next" onclick="next()">></button>
 </p>
 </div>
+<script src="js/app.js"></script> 
+<script src="js/share.js"></script> 
 <script>
 var currentStep = 1;
 var stepsNum = 4;
