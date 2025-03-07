@@ -40,9 +40,13 @@ color: #f85b1c !important;
 #prev {
 visibility: hidden;
 }
-img, canvas {
+canvas {
 width: 100%;
 height: auto;
+}
+img {
+width: 400px;
+height: 400px;
 }
 #displayCanvas {
 background: url(/twibbon.png);
@@ -107,7 +111,7 @@ width: auto;
 <!--<p><input id="fileInput" type="file" accept="image/*"></p>-->
 <div class="image-upload">
 <label for="fileInput">
-<img id="img" width="500" height="500" src="placeholder.png"/>
+<img id="img" src="placeholder.png"/>
 </label>
 <input id="fileInput" type="file" accept="image/*">
 </div>
