@@ -49,6 +49,24 @@ background: url(/twibbon.png);
 background-repeat: no-repeat;
 background-size: cover;
 }
+.btn {
+display: inline-block;
+padding: 6px 12px;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+border: 1px solid #adadad;
+background: #fff;
+border-radius: 4px;
+}           
+.btn:hover {
+color: #333;
+background-color: #e6e6e6;
+}
 @media (max-width: 700px) {
 #main {
 margin: 0 auto;
@@ -90,8 +108,8 @@ another one
 and here's the last step. the progress bar is responsive btw
 </div>
 <p>
-<button id="next" onclick="next();generateTwibbon()">LANJUTKAN</button>
-<button id="prev" onclick="prev();downloadImage()">DOWNLOAD</button>
+<button class="btn" id="next" onclick="next();generateTwibbon()">LANJUTKAN</button>
+<button class="btn" id="prev" onclick="prev();downloadImage()">DOWNLOAD</button>
 </p>
 </div>
 <script src="js/app.js"></script> 
