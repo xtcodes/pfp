@@ -44,6 +44,10 @@ img, canvas {
 width: 100%;
 height: auto;
 }
+#img {
+width: 200px;
+height: 200px;
+}
 #displayCanvas {
 background: url(/twibbon.png);
 background-repeat: no-repeat;
@@ -107,14 +111,15 @@ width: auto;
 <!--<p><input id="fileInput" type="file" accept="image/*"></p>-->
 <div class="image-upload">
 <label for="fileInput">
-<img id="img" src="placeholder.png"/>
+<img src="placeholder.png"/>
 </label>
 <input id="fileInput" type="file" accept="image/*">
 </div>
+<p><img id="img" src=""/></p>
 </div>
 <div class="stepPage" id="stepPage2">
 <p id="output" style="color:red;"></p>
-<p>Ukuran dan geser sesuaikan foto Anda dengan 2 jari.</p>
+<p>Gunakan 2 jari atau cubit untuk mengubah skala, memutar, dan memindahkan gambar di pratinjau.</p>
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
