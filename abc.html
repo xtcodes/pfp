@@ -13,7 +13,7 @@ margin: 0;
 padding: 0;
 font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;      
 }
-main {
+#main {
 width: 600px;
 margin: 5em auto;
 padding: 2em;
@@ -41,7 +41,7 @@ color: #f85b1c !important;
 visibility: hidden;
 }
 @media (max-width: 700px) {
-main {
+#main {
 margin: 0 auto;
 width: auto;
 }
@@ -50,7 +50,17 @@ width: auto;
 </head>
 
 <body>
-<main>
+<div id="main">
+<div id="progressbarContainer">
+<div id="emptyProgressbar"></div>
+<div id="completedProgress"></div>
+<ul>
+<li id="stepLable1">1</li>
+<li id="stepLable2">2</li>
+<li id="stepLable3">3</li>
+<li id="stepLable4">4</li>
+</ul>
+</div>
 <h1>Example Domain</h1>
 <div class="stepPage" id="stepPage1">
 Fisrt step
@@ -68,7 +78,7 @@ and here's the last step. the progress bar is responsive btw
 <button id="prev" onclick="prev()"><</button>
 <button id="next" onclick="next()">></button>
 </p>
-</main>
+</div>
 <script>
 var currentStep = 1;
 var stepsNum = 4;
