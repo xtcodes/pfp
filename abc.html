@@ -72,6 +72,7 @@ width: auto;
 <p><input id="fileInput" type="file" accept="image/*"></p>
 </div>
 <div class="stepPage" id="stepPage2">
+<p id="output" style="color:red;"></p>
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
@@ -84,8 +85,8 @@ another one
 and here's the last step. the progress bar is responsive btw
 </div>
 <p>
-<button id="prev" onclick="prev()"><</button>
-<button id="next" onclick="next();generateTwibbon()">></button>
+<button id="next" onclick="next();generateTwibbon()">LANJUTKAN</button>
+<button id="prev" onclick="prev();downloadImage()">DOWNLOAD</button>
 </p>
 </div>
 <script src="js/app.js"></script> 
