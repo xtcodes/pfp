@@ -107,7 +107,7 @@ width: auto;
 <!--<p><input id="fileInput" type="file" accept="image/*"></p>-->
 <div class="image-upload">
 <label for="fileInput">
-<img src="placeholder.png"/>
+<img id="img" src="placeholder.png"/>
 </label>
 <input id="fileInput" type="file" accept="image/*">
 </div>
@@ -201,6 +201,14 @@ document.getElementById("prev").style.visibility = "hidden";
 }
 }
 }
+</script>
+<script>
+document.getElementById("fileInput").onchange = function() {
+// create Blob-URL for File (=Blob) object
+var url = (URL || webkit).createObjectURL(this.files[0]);  
+// set Blob-URL as image source:
+document.getElementById("img").src = url;
+};
 </script>
 </body>
 </html>
