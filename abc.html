@@ -175,6 +175,21 @@ and here's the last step. the progress bar is responsive btw
 <script src="js/app.js"></script> 
 <script src="js/share.js"></script> 
 <script>
+let inputs = document.querySelectorAll('input[type="file"]');
+[].forEach.call(inputs, function (elem) {
+elem.addEventListener("change", (e) => {
+let fileName = elem.value.replace(/^.*\\/, "");
+if (fileName != "") {
+elem.nextElementSibling.innerText = fileName;
+elem.parentElement.classList.add("has_file");
+} else {
+elem.nextSibling.innerText = "Загрузить файл";
+elem.parentElement.classList.remove("has_file");
+}
+});
+});
+</script>
+<script>
 var currentStep = 1;
 var stepsNum = 4;
 
