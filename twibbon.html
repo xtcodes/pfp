@@ -64,5 +64,13 @@ width: auto;
 domain in literature without prior coordination or asking for permission.</p>
 <p><a href="https://www.iana.org/domains/example">More information...</a></p>
 </main>
+<script>
+$('.show').on('click', function() {  
+$('.box').toggleClass('box--show');  
+});
+$('.box').on('click', function() {
+alert('i am a box and I register events')
+})
+</script>
 </body>
 </html>
