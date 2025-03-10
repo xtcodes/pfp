@@ -41,5 +41,39 @@ width: auto;
 domain in literature without prior coordination or asking for permission.</p>
 <p><a href="https://www.iana.org/domains/example">More information...</a></p>
 </main>
+<script>
+var steps = [
+{
+content: `guide tour start`,
+width: "500px"
+},
+{
+element: "#step1",
+title: "Step 1",
+content: "Step Content 1",
+placement: "bottom-start"
+},
+{
+element: "#step2",
+title: "Step 2",
+content: "Step Content 2",
+placement: "bottom-start"
+},
+{
+element: "#step3",
+title: "Step 3",
+content: "Step Content3",
+placement: "bottom-start"
+},
+{
+content: `End Step`,
+width: "500px"
+}
+];
+var wt = new WebTour();
+wt.setSteps(steps);
+wt.start();
+
+</script>
 </body>
 </html>
