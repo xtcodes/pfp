@@ -137,37 +137,49 @@ selamanya.
   
 <script src="https://www.cssscript.com/demo/user-guide-web-tour/dist/webtour.min.js"></script>
 <script>
-var steps = [
-{
-content: `guide tour start`,
-width: "300px"
-},
-{
-element: "#step1",
-title: "Step 1",
-content: "Step Content 1",
-placement: "bottom-start"
-},
-{
-element: "#step2",
-title: "Step 2",
-content: "Step Content 2",
-placement: "bottom-start"
-},
-{
-element: "#step3",
-title: "Step 3",
-content: "Step Content3",
-placement: "bottom-start"
-},
-{
-content: `End Step`,
-width: "300px"
+$(".steps-container .steps-menu a").on("click", function() {
+event.preventDefault();
+var src = $(this).attr("href");
+$(this).parent().addClass("active");
+$(this)
+.parents(".steps-container")
+.find(".steps-content " + src)
+.addClass("active");
+$(this)
+.parents(".steps-container")
+.find(".steps-menu li a")
+.not(this)
+.parent()
+.removeClass("active");
+$(this)
+.parents(".steps-container")
+.find(".step-content")
+.not(src)
+.removeClass("active");
+});
+
+$(
+".steps-container .steps-content .step-content .pagination a"
+).on("click", function() {
+event.preventDefault();
+if ($(event.currentTarget).attr("href") == "#prev") {
+var target = $(event.currentTarget)
+.parents(".steps-content")
+.find(".active")
+.prev()
+.attr("id");
+} else if ($(event.currentTarget).attr("href") == "#next") {
+var target = $(event.currentTarget)
+.parents(".steps-content")
+.find(".active")
+.next()
+.attr("id");
 }
-];
-var wt = new WebTour();
-wt.setSteps(steps);
-wt.start();
+
+$(".steps-container .steps-menu #" + target).addClass("active");
+$(".steps-content #" + target).addClass("active");
+$(".steps-content .step-content").not("#" + target).removeClass("active");
+});
 
 </script>
 </body>
