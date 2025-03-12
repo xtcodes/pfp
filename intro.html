@@ -34,7 +34,7 @@ margin-top: -2px;
 background: #fff;
 padding: 2rem;
 margin: 5% auto;
-width: 50%;
+width: 80%;
 }
 .steps-container .steps-menu {
 list-style: none;
@@ -244,6 +244,21 @@ $(".steps-content #" + target).addClass("active");
 $(".steps-content .step-content").not("#" + target).removeClass("active");
 });
 
+</script>
+<script>
+let inputs = document.querySelectorAll('input[type="file"]');
+[].forEach.call(inputs, function (elem) {
+elem.addEventListener("change", (e) => {
+let fileName = elem.value.replace(/^.*\\/, "");
+if (fileName != "") {
+elem.nextElementSibling.innerText = fileName;
+elem.parentElement.classList.add("has_file");
+} else {
+elem.nextSibling.innerText = "Unggah Gambar";
+elem.parentElement.classList.remove("has_file");
+}
+});
+});
 </script>
 </body>
 </html>
