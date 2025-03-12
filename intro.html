@@ -83,6 +83,51 @@ pointer-events: none;
 cursor: default;
 opacity: 0.3;
 }
+.input-file {
+font-family: arial;
+font-size: 14px;
+border: 2px dashed #e1ddd4;
+position: relative;
+border-radius: 2px;
+height: 300px;
+cursor: pointer;
+color: #bebdbd;
+display: flex;
+background: #fff;
+align-items: center;
+justify-content: center;
+flex-direction: row !important;
+-webkit-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+.input-file:hover {
+color: #252424;
+border-style: solid;
+border-color: #000;
+}
+.input-file:before {
+content: "";
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: 1;
+cursor: pointer;
+}
+.input-file input {
+opacity: 0;
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+cursor: pointer;
+}
+.input-file span {
+cursor: pointer;
+}
 </style>    
 </head>
 
