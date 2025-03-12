@@ -9,28 +9,77 @@
 <link rel="stylesheet" href="https://www.cssscript.com/demo/user-guide-web-tour/dist/webtour.min.css">
 <style type="text/css">
 body {
-background-color: #f0f0f2;
-margin: 0;
-padding: 0;
-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;        
+display: flex;
+font-family: 'Nunito', sans-serif;
+line-height: 1.5;
+background: #f9fafb;
 }
-main {
-width: 600px;
-margin: 5em auto;
-padding: 2em;
-background-color: #fdfdff;
-border-radius: 0.5em;
-box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
-}
-a:link, a:visited {
-color: #38488f;
+a {
 text-decoration: none;
+color: #448aff;
+display: inline-block;
 }
-@media (max-width: 700px) {
-main {
-margin: 0 auto;
-width: auto;
+a:hover {
+color: rgba(68, 138, 255, 0.6);
 }
+.material-icons {
+vertical-align: middle;
+font-size: 110%;
+line-height: 1.25;
+margin-top: -2px;
+}
+.box {
+background: #fff;
+padding: 2rem;
+margin: 5% auto;
+width: 50%;
+}
+.steps-container .steps-menu {
+list-style: none;
+padding: 0;
+margin: 0 0 1rem 0;
+box-shadow: inset 0 -1px 0 0 #f0f2f5;
+}
+.steps-container .steps-menu li {
+display: inline-block;
+padding: 0 0 1rem 0;
+border-bottom: 1px solid transparent;
+margin-left: 1rem;
+}
+.steps-container .steps-menu li:first-child {
+margin: 0;
+}
+.steps-container .steps-menu li.active {
+border-color: #448aff;
+}
+.steps-container .steps-menu li.active a {
+color: #448aff;
+}
+.steps-container .steps-menu li a {
+color: rgba(68, 138, 255, 0.6);
+display: inline-block;
+}
+.steps-container .steps-menu li a:hover {
+color: #448aff;
+}
+.steps-container .steps-content .step-content {
+display: none;
+}
+.steps-container .steps-content .step-content.active {
+display: block;
+}
+.steps-container .steps-content .step-content .pagination {
+margin: 1rem 0;
+}
+.steps-container .steps-content .step-content:first-child .pagination a[href="#prev"] {
+pointer-events: none;
+cursor: default;
+opacity: 0.3;
+}
+.steps-container .steps-content .step-content:last-child .pagination a[href="#next"] {
+pointer-events: none;
+cursor: default;
+opacity: 0.3;
 }
 </style>    
 </head>
