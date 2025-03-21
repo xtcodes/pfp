@@ -30,12 +30,51 @@ min-width: 100%;
 width: 100%;
 min-height: 100%;
 }
-.image-upload > input {
+.upload-box {
+position: relative;
+width: 200px;
+height: 200px;
+margin: 50px auto;
+overflow: hidden;
+border: 1px dashed #ccc;
+text-align: center;
+}
+.upload-box::after {
+display: inline-block;
+margin-top: -8px;
+content: "Unggah File";
+line-height: 200px;
+font-size: 16px;
+color: #ccc;
+}
+.upload-box [type="file"] {
 display: none;
 }
-.image-upload img {
+.upload-box .upload-action {
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+box-sizing: border-box;
 width: 100%;
+height: 100%;
 cursor: pointer;
+}
+.upload-box .preview-box {
+position: absolute;
+box-sizing: border-box;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+.upload-box .preview-box img {
+min-width: 100%;
+width: 100%;
+min-height: 100%;
+}
+.hide {
+display: none;
 }
 #displayCanvas {
 background: url(img/no-image.png);
