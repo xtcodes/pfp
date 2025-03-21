@@ -98,7 +98,7 @@ domain in literature without prior coordination or asking for permission.</p>
 <p>
 <p style="color:red;"><strong id="output"></strong></p>
 <div class="upload-box">
-<input id="fileInput" type="file" accept="image/png,image/jpeg,image/jpg" class="upload-input"/>
+<input type="file" accept="image/png,image/jpeg,image/jpg" class="fileInput"/>
 <div class="upload-action"></div>
 <div class="preview-box"></div>
 </div>
@@ -130,8 +130,8 @@ document.getElementById("pic").src = url;
 </script>
 <script>
 $(".upload-action").click(function() {
-$(".upload-input").click();
-$(".upload-input").change(function() {
+$(".fileInput").click();
+$(".fileInput").change(function() {
 preview(this, $('.preview-box'));
 });
 });
