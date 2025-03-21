@@ -97,15 +97,21 @@ width: auto;
 domain in literature without prior coordination or asking for permission.</p>
 <p>
 <p style="color:red;"><strong id="output"></strong></p>
+<div class="upload-box">
+<input id="fileInput" type="file" accept="image/png,image/jpeg,image/jpg" class="upload-input"/>
+<div class="upload-action"></div>
+<div class="preview-box"></div>
+</div>
+<!--
 <div id="pic" class="image-upload">
 <label for="fileInput">
-<!--<img id="pic" src="img/no-image.png"/>-->
+<img id="pic" src="img/no-image.png"/>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </label>
 <input id="fileInput" type="file" accept="image/*">
 </div>
-</p>
+-->
 <p>
 <button class="btn" onclick="generateTwibbon()">Buat Twibbon</button>
 <button class="dl" onclick="downloadImage()">Unduh Twibbon</button>
