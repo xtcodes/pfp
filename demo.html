@@ -108,11 +108,11 @@ domain in literature without prior coordination or asking for permission.</p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </label>
-<input id="fileInput" type="file" accept="image/*">
+<input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
 </div>
 <p>
 <button class="def" onclick="generateTwibbon()">Buat Twibbon</button>
-<button class="suc" onclick="downloadImage()">Unduh Twibbon</button>
+<button class="suc" id="dL" onclick="downloadImage()" disabled>Unduh Twibbon</button>
 </p>
 </main>
 </body>
@@ -127,28 +127,10 @@ document.getElementById("pic").src = url;
 };
 </script>
 <script>
-$(".upload-action").click(function() {
-$(".fileInput").click();
-$(".fileInput").change(function() {
-preview(this, $('.preview-box'));
-});
-});
-
-function preview(file, previewBox) {
-if (file.files && file.files[0]) {
-var reader = new FileReader();
-reader.onload = function(e) {
-previewBox.html('<img src="' + e.target.result + '" />');
-};
-reader.readAsDataURL(file.files[0]);
-} else {
-previewBox.html(
-'<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' +
-file.value +
-"'\"></div>"
-);
-}
+function checkInput() {
+var input = document.getElementById('fileInput').value;
+var button = document.getElementById('dL');
+button.disabled = input === '';
 }
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </html>
