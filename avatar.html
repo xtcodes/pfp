@@ -70,9 +70,18 @@ width: auto;
 <main>
 <h1>Example Domain</h1>
 <p><button class="show">show</button></p>
+<p style="color:red;"><strong id="output"></strong></p>
+<div class="image-upload">
+<label for="fileInput">
+<img id="pic" src="img/no-image.png"/>
+</label>
+<input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
+</div>
 <div class="box">
-<p>This domain is for use in illustrative examples in documents. You may use this
-domain in literature without prior coordination or asking for permission.</p>
+<p>
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="500" height="500"></canvas>
+</p>
 </div>
 </main>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
