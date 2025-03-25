@@ -25,6 +25,29 @@ a:link, a:visited {
 color: #38488f;
 text-decoration: none;
 }
+.box {
+width: 100%;
+height: auto;
+background-color: #fdfdff;
+opacity: 0;
+visibility: hidden;
+-moz-transition: opacity 500ms linear, visibility 0s linear 500ms;
+-o-transition: opacity 500ms linear, visibility 0s linear 500ms;
+-webkit-transition: opacity 500ms linear, visibility 0s linear;
+-webkit-transition-delay: 0s, 500ms;
+transition: opacity 500ms linear, visibility 0s linear 500ms;
+}
+
+.box--show {
+opacity: 1;
+visibility: visible;
+cursor: pointer;
+-moz-transition: opacity 500ms linear, visibility 0s linear;
+-o-transition: opacity 500ms linear, visibility 0s linear;
+-webkit-transition: opacity 500ms linear, visibility 0s linear;
+transition: opacity 500ms linear, visibility 0s linear;
+}
+
 @media (max-width: 700px) {
 main {
 margin: 0 auto;
@@ -37,9 +60,11 @@ width: auto;
 <body>
 <main>
 <h1>Example Domain</h1>
+<button class="show">show</button>
+<p class="box">
 <p>This domain is for use in illustrative examples in documents. You may use this
 domain in literature without prior coordination or asking for permission.</p>
-<p><a href="https://www.iana.org/domains/example">More information...</a></p>
+</p>
 </main>
 </body>
 </html>
