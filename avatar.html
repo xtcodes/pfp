@@ -58,6 +58,11 @@ display: none;
 width: 100%;
 cursor: pointer;
 }
+#displayCanvas {
+background: url(img/no-image.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
 @media (max-width: 700px) {
 main {
 margin: 0 auto;
@@ -72,13 +77,13 @@ width: auto;
 <h1>Example Domain</h1>
 <p><button class="btn show" role="button" onclick="generateTwibbon()">show</button></p>
 <p style="color:red;"><strong id="output"></strong></p>
+<div class="box">
 <div class="image-upload">
 <label for="fileInput">
-<img id="pic" src="img/no-image.png"/>
+<!--<img id="pic" src="img/no-image.png"/>-->
 </label>
 <input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
 </div>
-<div class="box">
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 <p><button class="dl" role="button" onclick="downloadImage()">Download</button></p>
