@@ -6,6 +6,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="css/btn.css">
 <style type="text/css">
 body {
 background-color: #f0f0f2;
@@ -69,7 +70,7 @@ width: auto;
 <body>
 <main>
 <h1>Example Domain</h1>
-<p><button class="show" onclick="generateTwibbon()">show</button></p>
+<p><button class="btn show" role="button" onclick="generateTwibbon()">show</button></p>
 <p style="color:red;"><strong id="output"></strong></p>
 <div class="image-upload">
 <label for="fileInput">
@@ -80,6 +81,7 @@ width: auto;
 <div class="box">
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
+<p><button class="dl" role="button" onclick="downloadImage()">Download</button></p>
 </div>
 </main>
 <script src="js/app.js"></script>
