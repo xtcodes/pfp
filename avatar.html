@@ -66,5 +66,14 @@ width: auto;
 domain in literature without prior coordination or asking for permission.</p>
 </p>
 </main>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$('.show').on('click', function() {  
+$('.box').toggleClass('box--show');  
+});
+$('.box').on('click', function() {
+alert('i am a box and I register events')
+})
+</script>
 </body>
 </html>
