@@ -41,51 +41,6 @@ background: url(img/no-image.png);
 background-repeat: no-repeat;
 background-size: cover;
 }
-button {
-color: #fff;
-border: 0;
-border-radius: 3px;
-margin: 10px;
-padding: 6px 12px;
-border: 1px solid #ccc;
-outline: 0;
-}
-button:active {
-box-shadow: inset 1px 1px 5px rgba(99, 99, 99, 0.7);
-}
-button.def {
-color: #333;
-background-color: #fff;
-border-color: #ccc;
-}
-button.def:hover {
-background-color: #ebebeb;
-border-color: #adadad;
-}
-button.pri {
-background-color: #428bca;
-border-color: #357ebd;
-}
-button.pri:hover {
-background-color: #3276b1;
-border-color: #285e8e;
-}
-button.suc {
-background-color: #5cb85c;
-border-color: #4cae4c;
-}
-button.suc:hover {
-background-color: #47a447;
-border-color: #398439;
-}
-button.dan {
-background-color: #d9534f;
-border-color: #d43f3a;
-}
-button.dan:hover {
-background-color: #d2322d;
-border-color: #ac2925;
-}
 @media (max-width: 700px) {
 main {
 margin: 0 auto;
@@ -111,7 +66,7 @@ domain in literature without prior coordination or asking for permission.</p>
 <input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
 </div>
 <p>
-<button class="def" onclick="generateTwibbon()">Buat Twibbon</button>
+<button class="btn" role="button"> onclick="generateTwibbon()">Buat Twibbon</button>
 <button class="suc" id="dL" onclick="downloadImage()" disabled>Unduh Twibbon</button>
 </p>
 </main>
