@@ -81,11 +81,11 @@ width: auto;
 <div class="image-upload">
 <label for="fileInput">
 <!--<img id="pic" src="img/no-image.png"/>-->
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="500" height="500"></canvas>
 </label>
 <input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
 </div>
-<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
-<canvas id="displayCanvas" width="500" height="500"></canvas>
 <p><button class="dl" role="button" onclick="downloadImage()">Download</button></p>
 </div>
 </main>
