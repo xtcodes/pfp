@@ -29,6 +29,11 @@ text-decoration: none;
 img, canvas {
 width: 100%;
 height: auto;
+-moz-transition: opacity 500ms linear, visibility 0s linear 500ms;
+-o-transition: opacity 500ms linear, visibility 0s linear 500ms;
+-webkit-transition: opacity 500ms linear, visibility 0s linear;
+-webkit-transition-delay: 0s, 500ms;
+transition: opacity 500ms linear, visibility 0s linear 500ms;
 }
 .image-upload > input {
 display: none;
