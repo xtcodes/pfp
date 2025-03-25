@@ -78,10 +78,8 @@ width: auto;
 <input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
 </div>
 <div class="box">
-<p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
-</p>
 </div>
 </main>
 <script src="js/app.js"></script>
@@ -93,6 +91,14 @@ $('.box').toggleClass('box--show');
 $('.box').on('click', function() {
 alert('i am a box and I register events')
 })
+</script>
+<script>
+document.getElementById("fileInput").onchange = function() {
+// create Blob-URL for File (=Blob) object
+var url = (URL || webkit).createObjectURL(this.files[0]);  
+// set Blob-URL as image source:
+document.getElementById("pic").src = url;
+};
 </script>
 </body>
 </html>
