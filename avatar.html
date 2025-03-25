@@ -37,7 +37,6 @@ visibility: hidden;
 -webkit-transition-delay: 0s, 500ms;
 transition: opacity 500ms linear, visibility 0s linear 500ms;
 }
-
 .box--show {
 opacity: 1;
 visibility: visible;
@@ -47,7 +46,17 @@ cursor: pointer;
 -webkit-transition: opacity 500ms linear, visibility 0s linear;
 transition: opacity 500ms linear, visibility 0s linear;
 }
-
+img, canvas {
+width: 100%;
+height: auto;
+}
+.image-upload > input {
+display: none;
+}
+.image-upload img {
+width: 100%;
+cursor: pointer;
+}
 @media (max-width: 700px) {
 main {
 margin: 0 auto;
