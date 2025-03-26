@@ -37,7 +37,8 @@ margin: 150px 50px;
 border: 2px dashed #e1ddd4;
 position: relative;
 border-radius: 2px;
-height: 72px;
+width: 40ppx;
+height: 400px;
 cursor: pointer;
 color: #bebdbd;
 display: flex;
@@ -97,14 +98,13 @@ width: auto;
 domain in literature without prior coordination or asking for permission.</p>
 <p>
 <p style="color:red;"><strong id="output"></strong></p>
-<div class="image-upload">
-<label for="fileInput">
-<img id="pic" src="img/no-image.png" alt="" width="1" hidden/>
+<label class="fileInput">
+<input id="fileInput" type="file" accept="image/*">
+<span>UNGGAH GAMBAR</span>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
-</label>
 <input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
-</div>
+</label>
 <p>
 <button class="btn" role="button" onclick="generateTwibbon()">Buat Twibbon</button>
 <button class="dl" role="button" id="dL" onclick="downloadImage()" disabled>Unduh Twibbon</button>
@@ -114,12 +114,19 @@ domain in literature without prior coordination or asking for permission.</p>
 <script src="js/app.js"></script>
 <script src=""></script>
 <script>
-document.getElementById("fileInput").onchange = function() {
-// create Blob-URL for File (=Blob) object
-var url = (URL || webkit).createObjectURL(this.files[0]);  
-// set Blob-URL as image source:
-document.getElementById("pic").src = url;
-};
+let inputs = document.querySelectorAll('input[type="file"]');
+[].forEach.call(inputs, function (elem) {
+elem.addEventListener("change", (e) => {
+let fileName = elem.value.replace(/^.*\\/, "");
+if (fileName != "") {
+elem.nextElementSibling.innerText = fileName;
+elem.parentElement.classList.add("has_file");
+} else {
+elem.nextSibling.innerText = "Загрузить файл";
+elem.parentElement.classList.remove("has_file");
+}
+});
+});
 </script>
 <script>
 function checkInput() {
