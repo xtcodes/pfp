@@ -76,11 +76,13 @@ cursor: pointer;
 .input-file span {
 cursor: pointer;
 }
+/*
 #displayCanvas {
 background: url(twibbon.png);
 background-repeat: no-repeat;
 background-size: cover;
 }
+*/
 @media (max-width: 700px) {
 main {
 margin: 0 auto;
@@ -99,12 +101,18 @@ domain in literature without prior coordination or asking for permission.</p>
 <p style="color:red;"><strong id="output"></strong></p>
 <label class="input-file">
 <input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
-<span>UNGGAH GAMBAR</span>
+<span>
+UNGGAH GAMBAR
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="500" height="500"></canvas>
+</span>
 </label>
+<!--
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
+-->
 <p>
 <button class="btn" role="button" onclick="generateTwibbon()">Buat Twibbon</button>
 <button class="dl" role="button" id="dL" onclick="downloadImage()" disabled>Unduh Twibbon</button>
