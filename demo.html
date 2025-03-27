@@ -33,12 +33,11 @@ height: auto;
 .input-file {
 font-family: arial;
 font-size: 14px;
-/*margin: 150px 50px;*/
+margin: 150px 50px;
 border: 2px dashed #e1ddd4;
 position: relative;
 border-radius: 2px;
-width: 100%;
-height: auto;
+height: 72;
 cursor: pointer;
 color: #bebdbd;
 display: flex;
@@ -75,7 +74,6 @@ top: 0;
 cursor: pointer;
 }
 .input-file span {
-align-items: center;
 cursor: pointer;
 }
 /*
@@ -103,10 +101,12 @@ domain in literature without prior coordination or asking for permission.</p>
 <p style="color:red;"><strong id="output"></strong></p>
 <label class="input-file">
 <input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
-<span></span>
+<span>UNGGAH GAMBAR</span>
+</label>
+<p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
-</label>
+</p>
 <p>
 <button class="btn" role="button" onclick="generateTwibbon()">Buat Twibbon</button>
 <button class="dl" role="button" id="dL" onclick="downloadImage()" disabled>Unduh Twibbon</button>
