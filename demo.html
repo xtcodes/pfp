@@ -74,6 +74,11 @@ top: 0;
 cursor: pointer;
 }
 .input-file span {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
 cursor: pointer;
 }
 #displayCanvas {
@@ -100,11 +105,9 @@ domain in literature without prior coordination or asking for permission.</p>
 <label class="input-file">
 <input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
 <span>UNGGAH GAMBAR</span>
-</label>
-<p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
-</p>
+</label>
 <p>
 <button class="btn" role="button" onclick="generateTwibbon()">Buat Twibbon</button>
 <button class="dl" role="button" id="dL" onclick="downloadImage()" disabled>Unduh Twibbon</button>
