@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>Example Domain</title>
+<title>TWIBBON TOOLS</title>
 
 <meta charset="utf-8" />
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -29,15 +29,10 @@ text-decoration: none;
 img, canvas {
 width: 100%;
 height: auto;
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
 }
-/*
 #pic {
 width: 100px;
 }
-*/
 .image-upload > input {
 display: none;
 }
@@ -46,13 +41,11 @@ width: 100%;
 transition: all 0.2s ease-in-out;
 cursor: pointer;
 }
-/*
 #displayCanvas {
 background: url(twibbon.png);
 background-repeat: no-repeat;
 background-size: cover;
 }
-*/
 @media (max-width: 700px) {
 main {
 margin: 0 auto;
@@ -64,20 +57,19 @@ width: auto;
 
 <body>
 <main>
-<h1>Example Domain</h1>
+<h1>TWIBBON TOOLS</h1>
 <p>This domain is for use in illustrative examples in documents. You may use this
 domain in literature without prior coordination or asking for permission.</p>
 <p>
 <p style="color:red;"><strong id="output"></strong></p>
 <div class="image-upload">
 <label for="fileInput">
-<img src="img/no-image.png" id="pic">
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </label>
 <input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
 </div>
-<!--<p><img src="" id="pic"></p>-->
+<p><img src="" id="pic"></p>
 <p>
 <button class="btn" role="button" onclick="generateTwibbon()">Buat Twibbon</button>
 <button class="dl" role="button" id="dL" onclick="downloadImage()" disabled>Unduh Twibbon</button>
