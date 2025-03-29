@@ -50,8 +50,8 @@ background-size: cover;
 }
 .upload-box {
 position: relative;
-width: 100%;
-height: 100%;
+width: 200px;
+height: 200px;
 /*margin: 50px auto;*/
 overflow: hidden;
 border: 1px dashed #ccc;
@@ -124,9 +124,9 @@ domain in literature without prior coordination or asking for permission.</p>
 <input id="fileInput" type="file" oninput="checkInput()" accept="image/png,image/jpeg,image/jpg" class="upload-input"/>
 <div class="upload-action"></div>
 <div class="preview-box"></div>
-</div>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
+</div>
 <p>
 <button class="btn" role="button" onclick="generateTwibbon()">Buat Twibbon</button>
 <button class="dl" role="button" id="dL" onclick="downloadImage()" disabled>Unduh Twibbon</button>
