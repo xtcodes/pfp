@@ -175,14 +175,17 @@ button.disabled = input === '';
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
-$('#toggleModal').click(function(){
-$("#modal").addClass("showModal");
-$(".modal-content").addClass("slideModal");
-})
+const modal = document.querySelector(".modal");
+const openModalBtn = document.querySelector("#open-modal");
+const closeModalBtn = document.querySelector("#close-modal");
 
-$("#closeModal").click(function(){
-$("#modal").removeClass("showModal");
-$(".modal-content").removeClass("slideModal");
-})
+openModalBtn.addEventListener("click", function () {
+modal.style.display = "block";
+});
+
+closeModalBtn.addEventListener("click", function () {
+modal.style.display = "none";
+});
+
 </script>
 </html>
