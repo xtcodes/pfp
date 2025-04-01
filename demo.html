@@ -104,13 +104,11 @@ width: auto;
 domain in literature without prior coordination or asking for permission.</p>
 <p>
 <p style="color:red;"><strong id="output"></strong></p>
-<div class="image-upload">
-<label for="fileInput">
-<img src="img/no-image.png" id="pic">
-</label>
-<input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
+<div class="upload-box">
+<input id="fileInput" type="file" accept="image/png,image/jpeg,image/jpg" class="upload-input"/>
+<div class="upload-action"></div>
+<div class="preview-box"></div>
 </div>
-
 <p>
 <button id="open-modal" class="btn" role="button" onclick="generateTwibbon()">Buat Twibbon</button>
 </p>
