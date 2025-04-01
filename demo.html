@@ -60,7 +60,7 @@ background-color: rgba(0, 0, 0, 0.2);
 }
 .modal-content {
 margin: 20% auto;
-width: 500px;
+width: 100%;
 background-color: #fff;
 padding: 20px;
 animation: scale 0.5s ease;
@@ -113,20 +113,20 @@ domain in literature without prior coordination or asking for permission.</p>
 
 <p>
 <button id="open-modal" class="btn" role="button" onclick="generateTwibbon()">Buat Twibbon</button>
-<button class="dl" role="button" id="dL" onclick="downloadImage()" disabled>Unduh Twibbon</button>
 </p>
 
 <div class="modal">
 <div class="modal-content">
 <div class="modal-header">
 <span id="close-modal">&times;</span>
-<h3>Simple Modal</h3>
+<h3>TWIBBON TOOLS</h3>
 </div>
 <div class="modal-body">
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
+<p><button class="dl" role="button" id="dL" onclick="downloadImage()" disabled>Unduh Twibbon</button></p>
 </div>
 </div>
 </div>
