@@ -35,9 +35,11 @@ img, canvas {
 width: 100%;
 height: auto;
 }
+/*
 #pic {
 width: 100px;
 }
+*/
 .image-upload > input {
 display: none;
 border: 1px dashed #ccc;
@@ -125,22 +127,28 @@ domain in literature without prior coordination or asking for permission.</p>
 <p style="color:red;"><strong id="output"></strong></p>
 <div class="image-upload">
 <label for="fileInput">
-<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
-<canvas id="displayCanvas" width="500" height="500"></canvas>
+<img src="" id="pic">
 </label>
 <input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
 </div>
-<p><img src="" id="pic"></p>
+
 <p>
-<button class="btn" role="button" onclick="generateTwibbon()">Buat Twibbon</button>
+<button id="open-modal" class="btn" role="button" onclick="generateTwibbon()">Buat Twibbon</button>
 <button class="dl" role="button" id="dL" onclick="downloadImage()" disabled>Unduh Twibbon</button>
 </p>
 
-<div id="modal" class="modal">
-<div class="overlay"></div>
+<div class="modal">
 <div class="modal-content">
-<p>Some contents</p>
-<button id="closeModal">Toggle Modal</button>
+<div class="modal-header">
+<span id="close-modal">&times;</span>
+<h3>Simple Modal</h3>
+</div>
+<div class="modal-body">
+<p>
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="500" height="500"></canvas>
+</p>
+</div>
 </div>
 </div>
 
