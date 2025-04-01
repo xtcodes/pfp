@@ -54,22 +54,7 @@ background: url(img/no-image.png);
 background-repeat: no-repeat;
 background-size: cover;
 }
-#open-modal {
-border: none;
-background-color: #000;
-border-radius: 1.5rem;
-padding: 1.1rem 3.3rem;
-font-size: 1.1rem;
-font-weight: bold;
-cursor: pointer;
-color: #fff;
-user-select: none;
-transition: all 0.3s ease-in-out;
-}
-#open-modal:hover {
-background-color: #eeeeee;
-color: #000;
-}
+
 .modal {
 display: none;
 position: fixed;
@@ -127,7 +112,7 @@ domain in literature without prior coordination or asking for permission.</p>
 <p style="color:red;"><strong id="output"></strong></p>
 <div class="image-upload">
 <label for="fileInput">
-<img src="" id="pic">
+<img src="img/no-image.png" id="pic">
 </label>
 <input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
 </div>
