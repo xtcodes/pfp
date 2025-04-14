@@ -53,6 +53,11 @@ cursor: pointer;
 .image-upload:hover img {
 border: 4px dashed #005af0;
 }
+.image-upload #camera {
+position: absolute;
+top: 10px;
+left: 10px;
+}
 /*
 #displayCanvas {
 background: url(img/erorr-image.png);
@@ -121,6 +126,7 @@ width: auto;
 <p style="color:red;"><strong id="output"></strong></p>
 <div class="image-upload">
 <label for="fileInput">
+<i id="camera" class="fas fa-camera"></i>
 <img id="pic" src="img/add-image.png"/>
 </label>
 
