@@ -80,9 +80,12 @@ width: auto;
 <p>file input preview</p>
 <div class="file-input-container">
 <label for="fileInput" class="file-input-label">Choose File</label>
-<input type="file" id="fileInput" class="file-input">
+<input type="file" id="fileInput" class="file-input" oninput="checkInput()" accept="image/*">
 <img for="fileInput" class="file-preview" id="filePreview" alt="Preview Image">
 </div>
+<p>
+<button class="btn" role="button" id="click" onclick="generateTwibbon()" disabled>BUAT TWIBBON</button>
+</p>
 </div>
 
 <script>
