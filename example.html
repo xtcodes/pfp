@@ -29,8 +29,8 @@ color: #a1a1a1;
 }
 .file-input-container {
 position: relative;
-width: 355px;
-height: 355px;
+width: 400px;
+height: 400px;
 border: 2px dashed #ccc;
 border-radius: 5px;
 overflow: hidden;
@@ -81,11 +81,9 @@ height: auto;
 <label for="fileInput" class="file-input-label">Choose File</label>
 <input type="file" id="fileInput" class="file-input" oninput="checkInput()" accept="image/*">
 <img for="fileInput" class="file-preview" id="filePreview" alt="Preview Image">
-</div>
-<p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
-<canvas id="displayCanvas" width="500" height="500"></canvas>
-</p>
+<canvas id="displayCanvas" width="400" height="400"></canvas>
+</div>
 <p>
 <button class="btn" role="button" onclick="generateTwibbon()">BUAT TWIBBON</button>
 <button id="click" class="dl" role="button" onclick="downloadImage()" disabled>UNDUH TWIBBON</button>
