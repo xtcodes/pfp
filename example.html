@@ -65,11 +65,9 @@ height: 100%;
 object-fit: cover;
 display: none;
 }
-@media (max-width: 700px) {
-main {
-margin: 0 auto;
-width: auto;
-}
+img, canvas {
+width: 100%;
+height: auto;
 }
 </style>    
 </head>
@@ -82,6 +80,8 @@ width: auto;
 <label for="fileInput" class="file-input-label">Choose File</label>
 <input type="file" id="fileInput" class="file-input" oninput="checkInput()" accept="image/*">
 <img for="fileInput" class="file-preview" id="filePreview" alt="Preview Image">
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="500" height="500"></canvas>
 </div>
 <p>
 <button class="btn" role="button" id="click" onclick="generateTwibbon()" disabled>BUAT TWIBBON</button>
