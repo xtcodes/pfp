@@ -86,10 +86,17 @@ height: auto;
 </div>
 <p>
 <button class="btn" role="button" id="click" onclick="generateTwibbon()">BUAT TWIBBON</button>
-<button class="dl" role="button" onclick="downloadImage()" disabled>UNDUH TWIBBON</button>
+<button id="click" class="dl" role="button" onclick="downloadImage()" disabled>UNDUH TWIBBON</button>
 </p>
 </div>
-
+<script src="js/app.js"></script>
+<script>
+function checkInput() {
+var input = document.getElementById('fileInput').value;
+var button = document.getElementById('click');
+button.disabled = input === '';
+}
+</script>
 <script>
 const fileInput = document.getElementById("fileInput");
 const previewImg = document.getElementById("filePreview");
