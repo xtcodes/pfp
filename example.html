@@ -76,6 +76,7 @@ height: auto;
 <div class="main">
 <h1>Example Domain</h1>
 <p>file input preview</p>
+<p style="color:red;"><strong id="output"></strong></p>
 <div class="file-input-container">
 <label for="fileInput" class="file-input-label">Choose File</label>
 <input type="file" id="fileInput" class="file-input" oninput="checkInput()" accept="image/*">
@@ -84,7 +85,8 @@ height: auto;
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </div>
 <p>
-<button class="btn" role="button" id="click" onclick="generateTwibbon()" disabled>BUAT TWIBBON</button>
+<button class="btn" role="button" id="click" onclick="generateTwibbon()">BUAT TWIBBON</button>
+<button class="dl" role="button" onclick="downloadImage()" disabled>UNDUH TWIBBON</button>
 </p>
 </div>
 
