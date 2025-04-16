@@ -81,9 +81,11 @@ height: auto;
 <label for="fileInput" class="file-input-label">Choose File</label>
 <input type="file" id="fileInput" class="file-input" oninput="checkInput()" accept="image/*">
 <img for="fileInput" class="file-preview" id="filePreview" alt="Preview Image">
+</div>
+<p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
-</div>
+</p>
 <p>
 <button class="btn" role="button" onclick="generateTwibbon()">BUAT TWIBBON</button>
 <button id="click" class="dl" role="button" onclick="downloadImage()" disabled>UNDUH TWIBBON</button>
