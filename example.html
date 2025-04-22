@@ -12,20 +12,21 @@
 <link rel="stylesheet" href="css/btn.css">
 <style type="text/css">
 body {
-font-family: sans-serif;
-}
-.main {
+font-family: "Baloo 2", cursive;
+background-color: #f0f0f2;
 display: flex;
-flex-direction: column;
 justify-content: center;
 align-items: center;
-min-height: 80vh;
+height: 100vh;
+font-size: 1.2rem;
 }
-.main > p {
-text-align: center;
+section {
+background-color: #fdfdff;
+padding: 2rem;
+box-shadow: inset -1px -1px 5px #ccc;
 }
-.main > p > i {
-color: #a1a1a1;
+section :only-of-type {
+color: #ff07a7;
 }
 .file-input-container {
 position: relative;
@@ -80,7 +81,7 @@ display: block;
 </head>
 
 <body>
-<div class="main">
+<section>
 <h1>Example Domain</h1>
 <p>file input preview</p>
 <p style="color:red;"><strong id="output"></strong></p>
@@ -97,7 +98,7 @@ display: block;
 <button class="btn" role="button" onclick="generateTwibbon()">BUAT TWIBBON</button>
 <button id="click" class="dl" role="button" onclick="downloadImage()" disabled>UNDUH TWIBBON</button>
 </p>
-</div>
+</section>
 <script src="js/app.js"></script>
 <script>
 function checkInput() {
