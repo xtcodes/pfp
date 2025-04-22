@@ -13,20 +13,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
 <style type="text/css">
 body {
-font-family: "Baloo 2", cursive;
 background-color: #f0f0f2;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-font-size: 1.2rem;
+margin: 0;
+padding: 0;
+font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;       
 }
-section {
+main {
+width: 600px;
+margin: 5em auto;
+padding: 2em;
 background-color: #fdfdff;
-padding: 2rem;
-box-shadow: inset -1px -1px 5px #ccc;
+border-radius: 0.5em;
+box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
 }
-section :only-of-type {
+a:link, a:visited {
+color: #38488f;
+text-decoration: none;
+}
+main :only-of-type {
 color: #ff07a7;
 }
 .file-input-container {
@@ -78,11 +82,17 @@ height: auto;
 position: relative;
 display: block;
 }
+@media (max-width: 700px) {
+main {
+margin: 0 auto;
+width: auto;
+}
+}
 </style>    
 </head>
 
 <body>
-<section>
+<main>
 <h1>Example Domain</h1>
 <p>file input preview</p>
 <p style="color:red;"><strong id="output"></strong></p>
@@ -99,7 +109,7 @@ display: block;
 <button class="btn" role="button" onclick="generateTwibbon()">BUAT TWIBBON</button>
 <button id="click" class="dl" role="button" onclick="downloadImage()" disabled>UNDUH TWIBBON</button>
 </p>
-</section>
+</main>
 <script src="js/app.js"></script>
 <script>
 function checkInput() {
