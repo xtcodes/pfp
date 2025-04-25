@@ -14,23 +14,18 @@
 <style type="text/css">
 body {
 background-color: #f0f0f2;
-margin: 0;
-padding: 0;
+height: 100vh;
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
 font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;       
-}
-main {
-width: 600px;
-margin: 5em auto;
-padding: 2em;
-background-color: #fdfdff;
-border-radius: 0.5em;
-box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
 }
 a:link, a:visited {
 color: #38488f;
 text-decoration: none;
 }
-main :only-of-type {
+body :only-of-type {
 color: #ff07a7;
 }
 .file-input-container {
@@ -79,7 +74,7 @@ width: 100%;
 height: auto;
 }
 @media (max-width: 700px) {
-main {
+body {
 margin: 0 auto;
 width: auto;
 }
@@ -88,7 +83,6 @@ width: auto;
 </head>
 
 <body>
-<main>
 <h1>Example Domain</h1>
 <p>file input preview</p>
 <p style="color:red;"><strong id="output"></strong></p>
@@ -105,7 +99,6 @@ width: auto;
 <button class="btn" role="button" onclick="generateTwibbon()">BUAT TWIBBON</button>
 <button id="click" class="dl" role="button" onclick="downloadImage()" disabled>UNDUH TWIBBON</button>
 </p>
-</main>
 <script src="js/app.js"></script>
 <script>
 function checkInput() {
