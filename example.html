@@ -10,21 +10,10 @@
 <meta name="keywords" content="Twibbon, Avatar, PFP">
 <link rel="icon" type="image/x-icon" href="favicon.png">
 <link rel="stylesheet" href="css/btn.css">
+<link rel="stylesheet" href="css/style.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
 <style type="text/css">
-body {
-background-color: #f0f0f2;
-height: 100vh;
-width: 100vw;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;       
-}
-a:link, a:visited {
-color: #38488f;
-text-decoration: none;
-}
 body :only-of-type {
 color: #ff07a7;
 }
@@ -73,16 +62,11 @@ img, canvas, #displayCanvas {
 width: 100%;
 height: auto;
 }
-@media (max-width: 700px) {
-body {
-margin: 0 auto;
-width: auto;
-}
-}
 </style>    
 </head>
 
 <body>
+<article>
 <h1>Example Domain</h1>
 <p>file input preview</p>
 <p style="color:red;"><strong id="output"></strong></p>
@@ -99,6 +83,7 @@ width: auto;
 <button class="btn" role="button" onclick="generateTwibbon()">BUAT TWIBBON</button>
 <button id="click" class="dl" role="button" onclick="downloadImage()" disabled>UNDUH TWIBBON</button>
 </p>
+</article>
 <script src="js/app.js"></script>
 <script>
 function checkInput() {
