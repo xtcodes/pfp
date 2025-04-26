@@ -18,7 +18,6 @@
 box-sizing: border-box;
 }
 p {
-text-align: center;
 padding: 2rem;
 color: #ccc;
 }
@@ -38,9 +37,9 @@ color: #ff07a7;
 }
 .file-input-container {
 position: relative;
-max-width: 960px;
 width: 100%;
 width: calc(100% - 1rem);
+height: auto;
 border: 2px dashed #ccc;
 border-radius: 5px;
 overflow: hidden;
@@ -87,10 +86,9 @@ height: auto;
 
 <body>
 <div class="article">
-<h1>Example Domain</h1>
 <p>file input preview</p>
 <p style="color:red;"><strong id="output"></strong></p>
-<div id="res" class="file-input-container" width="500px" height="500px">
+<div class="file-input-container">
 <label for="fileInput" class="file-input-label">Tap here to load your picture</label>
 <input type="file" id="fileInput" class="file-input" oninput="checkInput()" accept="image/*">
 <img for="fileInput" class="file-preview" id="filePreview" alt="Preview Image">
