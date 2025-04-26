@@ -19,13 +19,13 @@ box-sizing: border-box;
 }
 p {
 text-align: center;
-padding: 4rem;
+padding: 2rem;
 color: #ccc;
 }
 body {
 background: #f0f0f2;
 }
-article {
+.article {
 max-width: 960px;
 width: 100%;
 width: calc(100% - 1rem);
@@ -86,7 +86,7 @@ height: auto;
 </head>
 
 <body>
-<article>
+<div class="article">
 <h1>Example Domain</h1>
 <p>file input preview</p>
 <p style="color:red;"><strong id="output"></strong></p>
@@ -103,10 +103,8 @@ height: auto;
 <button class="btn" role="button" onclick="generateTwibbon()">BUAT TWIBBON</button>
 <button id="click" class="dl" role="button" onclick="downloadImage()" disabled>UNDUH TWIBBON</button>
 </p>
-</article>
-<footer>
-<p><a target="_blank" rel="noopener" href="#">Dibuat oleh Ferry Ayunda</a></p>
-</footer>
+</div>
+
 <script src="js/app.js"></script>
 <script>
 function checkInput() {
