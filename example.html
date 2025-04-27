@@ -14,20 +14,18 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
 <style type="text/css">
-* {
-box-sizing: border-box;
-}
 body {
-background: #f0f0f2;
+margin: 0;
 }
-.article {
+.header {
+padding: 1rem 0;
+background-color: #FFAB91;
+}
+.container {
+margin: 0 auto;
+padding: 0 calc(0.5rem + 6.5vw);
 max-width: 600px;
-width: 100%;
-width: calc(100% - 1rem);
-margin: 5rem auto;
-padding: 2rem;
-background: #fdfdff;
-} 
+}
 body :only-of-type {
 color: #ff07a7;
 }
@@ -80,6 +78,18 @@ height: auto;
 </head>
 
 <body>
+<header class="header">
+<div class="container">
+<p></p>
+</div>
+</header>
+<main>
+<div class="container">
+<h1>Welcome</h1>
+<p>This is the landing page or whatever</p>
+</div>
+</main>
+<!--
 <div class="article">
 <p>file input preview</p>
 <p style="color:red;"><strong id="output"></strong></p>
@@ -97,7 +107,7 @@ height: auto;
 <button id="click" class="dl" role="button" onclick="downloadImage()" disabled>UNDUH TWIBBON</button>
 </p>
 </div>
-
+-->
 <script src="js/app.js"></script>
 <script>
 function checkInput() {
