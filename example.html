@@ -67,7 +67,7 @@ body :only-of-type {
 color: #ff07a7;
 }
 main {
-text-align: center;
+/*text-align: center;*/
 padding: 1em;
 max-width: 240px;
 margin: 0 auto;
@@ -81,6 +81,13 @@ font-weight: 100;
 img, canvas {
 width: 100%;
 height: auto;
+}
+.image-upload > input {
+display: none;
+}
+.image-upload img {
+width: 100%;
+cursor: pointer;
 }
 @media (min-width: 640px) {
 main {
