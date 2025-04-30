@@ -115,8 +115,7 @@ max-width: 100$;
 
 <div class="image-upload">
 <label for="fileInput">
-<canvas id = "can"></canvas>
-<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="canvas" width="1024" height="1024"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </label>
 <input id="fileInput" type="file" onchange="upload()" accept="image/*">
@@ -160,7 +159,7 @@ reader.readAsDataURL(file);
 var img=null;
 var canvas=null;
 function upload(){
-canvas = document.getElementById("can");  
+canvas = document.getElementById("canvas");  
 var file = document.getElementById("fileInput");  
 img = new SimpleImage(file);
 img.drawTo(canvas);
