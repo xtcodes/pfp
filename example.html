@@ -104,7 +104,6 @@ max-width: 100$;
 }
 }
 </style>    
-<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
 </head>
 
 <body>
@@ -118,13 +117,8 @@ max-width: 100$;
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </label>
-<input id="fileInput" type="file" onchange="upload()" accept="image/*">
+<input id="fileInput" type="file" oninput="checkInput()"  accept="image/*">
 </div>
-  
-<!--
-<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
-<canvas id="displayCanvas" width="500" height="500"></canvas>
--->
   
 <p>
 <button class="btn" role="button" onclick="generateTwibbon()">BUAT</button>
@@ -154,16 +148,6 @@ previewImg.style.display = "block";
 reader.readAsDataURL(file);
 }
 });
-</script>
-<script>
-var img=null;
-var canvas=null;
-function upload(){
-canvas = document.getElementById("canvas");  
-var file = document.getElementById("fileInput");  
-img = new SimpleImage(file);
-img.drawTo(canvas);
-}
 </script>
 </body>
 </html>
