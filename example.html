@@ -77,7 +77,7 @@ color: #ff3e00;
 text-transform: uppercase;
 font-weight: 100;
 }
-img, canvas {
+img, #canvas {
 width: 100%;
 height: auto;
 }
@@ -88,7 +88,7 @@ display: none;
 width: 100%;
 cursor: pointer;
 }
-#file-preview {
+#filePreview {
 position: absolute;
 top: 0;
 left: 0;
@@ -113,7 +113,7 @@ max-width: none;
 
 <div class="image-upload">
 <label for="fileInput">
-<!--<img id="filePreview" src="https://susahcebok.github.io/laughing-invention/prev.png"/>-->
+<canvas id="filePreview"></canvas>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </label>
