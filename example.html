@@ -116,7 +116,7 @@ max-width: none;
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </label>
-<input id="fileInput" type="file" accept="image/*">
+<input id="fileInput" type="file" oninput="checkInput()" accept="image/*">
 </div>
   
 <!--
@@ -125,8 +125,8 @@ max-width: none;
 -->
   
 <p>
-<button class="btn" role="button" onclick="generateTwibbon()">BUAT TWIBBON</button>
-<button id="click" class="dl" role="button" onclick="downloadImage()" disabled>UNDUH TWIBBON</button>
+<button class="btn" role="button" onclick="generateTwibbon()">BUAT</button>
+<button id="click" class="dl" role="button" onclick="downloadImage()" disabled>UNDUH</button>
 </p>
 </main>
 
