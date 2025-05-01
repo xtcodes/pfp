@@ -8,6 +8,12 @@ let imgX = 0, imgY = 0;
 let imgScale = 1;
 let initialDistance = 0;
 
+ctx.beginPath();
+ctx.font = "17px arial blue"
+ctx.fillStyle = "#FFFFFF";
+ctx.fillText("Click To Upload", 15, 75);
+ctx.closePath();
+
 function generateTwibbon() {
 const output = document.getElementById('output');
 const fileInput = document.getElementById('fileInput');
@@ -135,9 +141,3 @@ link.download = 'twibbon.png';
 link.href = canvas.toDataURL('image/png');
 link.click();
 }
-
-ctx.beginPath();
-ctx.font = "17px arial blue"
-ctx.fillStyle = "#FFFFFF";
-ctx.fillText("Click To Upload", 15, 75);
-ctx.closePath();
