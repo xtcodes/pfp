@@ -10,7 +10,7 @@ let initialDistance = 0;
 
 ctx.beginPath();
 ctx.font = "17px arial blue"
-ctx.fillStyle = "#FFFFFF";
+ctx.fillStyle = "#ddd";
 ctx.fillText("Click To Upload", 15, 75);
 ctx.closePath();
 
