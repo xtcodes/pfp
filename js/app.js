@@ -135,3 +135,9 @@ link.download = 'twibbon.png';
 link.href = canvas.toDataURL('image/png');
 link.click();
 }
+
+ctx.beginPath();
+ctx.font = "17px arial blue"
+ctx.fillStyle = "#FFFFFF";
+ctx.fillText("Click To Upload", 15, 75);
+ctx.closePath();
