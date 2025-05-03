@@ -115,7 +115,6 @@ max-width: 80%;
 
 <div class="image-upload">
 <label for="fileInput">
-<img id="filePreview" src="">
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </label>
@@ -136,20 +135,6 @@ var button = document.getElementById('click');
 button.disabled = input === '';
 }
 </script>
-<script>
-const fileInput = document.getElementById("fileInput");
-const previewImg = document.getElementById("filePreview");
-fileInput.addEventListener("change", function() {
-const file = this.files[0];
-if (file) {
-const reader = new FileReader();
-reader.addEventListener("load", function() {
-previewImg.setAttribute("src", this.result);
-previewImg.style.display = "block";
-});
-reader.readAsDataURL(file);
-}
-});
-</script>
+
 </body>
 </html>
