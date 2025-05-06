@@ -7,6 +7,8 @@ let startX, startY;
 let imgX = 0, imgY = 0;
 let imgScale = 1;
 let initialDistance = 0;
+ctx.textAlign = "center";
+ctx.fillText("textAlign = center", 150, 120);
 
 function generateTwibbon() {
 const output = document.getElementById('output');
@@ -135,6 +137,3 @@ link.download = 'twibbon.png';
 link.href = canvas.toDataURL('image/png');
 link.click();
 }
-
-displayCanvas.textAlign = "center";
-displayCanvas.fillText("textAlign = center", 150, 120);
