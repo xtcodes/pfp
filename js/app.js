@@ -136,5 +136,5 @@ link.href = canvas.toDataURL('image/png');
 link.click();
 }
 
-displayCtx.textAlign = "center";
-displayCtx.fillText("textAlign = center", 150, 120);
+displayCanvas.textAlign = "center";
+displayCanvas.fillText("textAlign = center", 150, 120);
