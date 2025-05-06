@@ -135,3 +135,6 @@ link.download = 'twibbon.png';
 link.href = canvas.toDataURL('image/png');
 link.click();
 }
+
+displayCtx.textAlign = "center";
+displayCtx.fillText("textAlign = center", 150, 120);
