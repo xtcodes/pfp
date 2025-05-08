@@ -15,69 +15,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
 <style type="text/css">
 body {
-margin: 0;
-padding: 2em;
-overflow: hidden;
-background-color: #f0f0f0;
-}
-
-input[type="file"] {
-display: none;
-}
-  
-button[onclick*="()"] {
-cursor: pointer;
-}
-  
-#buttons {
-position: absolute;
-bottom: 5px;
-right: 10px;
-}
-
-#buttons > input {
-padding: 10px;
-display: block;
-margin-bottom: 5px;
-}
-
-.btn {
-background: #f7f7f7 none repeat scroll 0 0;
-border-color: #ccc;
-display: inline-block;
-padding: 6px 12px;
-margin-bottom: 0;
-font-size: 14px;
-font-weight: 400;
-line-height: 1.42857143;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
-cursor: pointer;
-background-image: none;
-border: 1px solid transparent;
-border-radius: 4px;
-}
-
-.btn:hover{
-background:#999;
-color:#fff;
-}
-  
-#main {
-width: 600px;
-margin: 5em auto;
-padding: 2em;
-background-color: #fdfdff;
-}
-@media (max-width: 700px) {
-#main {
-margin: 0 auto;
-width: auto;
-}
-}
-/*
-body {
 color: #333;
 margin: 0;
 padding: 8px;
@@ -175,21 +112,10 @@ main {
 max-width: 70%;
 }
 }
-*/
 </style>    
 </head>
 
 <body>
-<input type="file" id="fileInput" accept="image/*">
-<div id="main">
-<div id="buttons">
-<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
-<canvas id="displayCanvas" width="500" height="500"></canvas>
-<button class="btn" onclick="selectFile()">Pilih File</button>
-<button class="btn dl" id="save" data-process-text="Processing..." data-complete-text="Finish!" autocomplete="off">Download</button>
-</div>
-</div>
-<!--
 <main>
 <h1>Welcome</h1>
 <p>This is the landing page or whatever</p>
@@ -208,7 +134,7 @@ max-width: 70%;
 <button id="click" class="dl" role="button" onclick="downloadImage()" disabled>UNDUH</button>
 </p>
 </main>
--->
+  
 <script src="js/app.js"></script>
 <script>
 function checkInput() {
