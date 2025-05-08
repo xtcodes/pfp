@@ -181,6 +181,13 @@ max-width: 70%;
 </head>
 
 <body>
+<input type="file" id="fileInput" accept="image/*">
+<div id="main"></div>
+<div id="buttons">
+<button class="btn" onclick="selectFile()">Pilih File</button>
+<button class="btn dl" id="save" data-process-text="Processing..." data-complete-text="Finish!" autocomplete="off">Download</button>
+</div>
+<!--
 <main>
 <h1>Welcome</h1>
 <p>This is the landing page or whatever</p>
@@ -199,7 +206,7 @@ max-width: 70%;
 <button id="click" class="dl" role="button" onclick="downloadImage()" disabled>UNDUH</button>
 </p>
 </main>
-
+-->
 <script src="js/app.js"></script>
 <script>
 function checkInput() {
