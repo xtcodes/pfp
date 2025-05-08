@@ -19,7 +19,6 @@ margin: 0;
 padding: 0;
 overflow: hidden;
 background-color: #f0f0f0;
-background: url('https://jiinbe.github.io/koenvajs/user.png') center center no-repeat #f0f0f0;
 }
 
 input[type="file"] {
@@ -182,7 +181,10 @@ max-width: 70%;
 
 <body>
 <input type="file" id="fileInput" accept="image/*">
-<div id="main"></div>
+<div id="main">
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="500" height="500"></canvas>
+</div>
 <div id="buttons">
 <button class="btn" onclick="selectFile()">Pilih File</button>
 <button class="btn dl" id="save" data-process-text="Processing..." data-complete-text="Finish!" autocomplete="off">Download</button>
