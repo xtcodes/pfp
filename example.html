@@ -15,6 +15,62 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
 <style type="text/css">
 body {
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #f0f0f0;
+background: url('https://jiinbe.github.io/koenvajs/user.png') center center no-repeat #f0f0f0;
+}
+
+input[type="file"] {
+display: none;
+}
+  
+button[onclick*="()"] {
+cursor: pointer;
+}
+  
+#buttons {
+position: absolute;
+bottom: 5px;
+right: 10px;
+}
+
+#buttons > input {
+padding: 10px;
+display: block;
+margin-bottom: 5px;
+}
+
+.btn {
+background: #f7f7f7 none repeat scroll 0 0;
+border-color: #ccc;
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 4px;
+}
+
+.btn:hover{
+background:#999;
+color:#fff;
+}
+  
+#stage-container {
+width: 100%;
+height: 100%;
+}
+/*
+body {
 color: #333;
 margin: 0;
 padding: 8px;
@@ -63,11 +119,10 @@ background-color: #ddd;
 button:focus {
 border-color: #666;
 }
-/*body :only-of-type {
+body :only-of-type {
 color: #ff07a7;
-}*/
+}
 main {
-/*text-align: center;*/
 padding: 1em;
 max-width: 300px;
 margin: 0 auto;
@@ -113,6 +168,7 @@ main {
 max-width: 70%;
 }
 }
+*/
 </style>    
 </head>
 
