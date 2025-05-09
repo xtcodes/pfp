@@ -92,18 +92,21 @@ width: auto;
 } 
 </style>    
 </head>
-
 <body>
-  
+ 
 <main>
-<h4><span id="output" class="label error">Error</span></h4> 
-
 <div style="width: 100%">
 <label  for="fileInput" class="dropimage file">
 <input  id="fileInput" title="Drop image or click me" type="file" oninput="checkInput()" accept="image/*"> 
-</label> 
-</div>
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="500" height="500"></canvas>
 
+</label> 
+<p>
+<button class="" role="button" id="click" onclick="generateTwibbon()" disabled>BUAT TWIBBON</button>
+</p>
+</div>
+<!--
 <p>
 <button class="btn open-modal" role="button" id="click" onclick="generateTwibbon()" disabled>BUAT TWIBBON</button>
 </p>
@@ -111,7 +114,6 @@ width: auto;
 <div class="modal">
 <div class="modal-content">
 <div class="modal-header">
-<!--<span id="close-modal">&times;</span>-->
 <h3>TWIBBON TOOLS</h3>
 </div>
 <div class="modal-body">
@@ -126,7 +128,7 @@ width: auto;
 </div>
 </div>
 </div>
-  
+-->  
 </main>
   
 <script src="js/app.js"></script>
@@ -177,5 +179,6 @@ var button = document.getElementById('click');
 button.disabled = input === '';
 }
 </script>
+  
 </body>
 </html>
