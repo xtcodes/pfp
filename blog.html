@@ -68,11 +68,6 @@ height: auto;
 border-radius: 50%; /* Make it a circle */ 
 padding-bottom: 100%; /* 100% height (ratio 1) */ 
 }
-
-canvas {
-width: 100%;
-height: auto;
-}
   
 @media (max-width: 700px) {
 body, div {
@@ -87,8 +82,8 @@ width: auto;
 <div class="res"> 
 <label  for="fileInput" class="dropimage profile">
 <input  id="fileInput" title="Drop image or click me" type="file" accept="image/*"> 
-<canvas class="profile" id="canvas" style="display: none;"></canvas>
-<canvas class="profile" id="displayCanvas"></canvas>
+<canvas class="res profile" id="canvas" style="display: none;"></canvas>
+<canvas class="res profile" id="displayCanvas"></canvas>
 </label> 
 </div>
 
