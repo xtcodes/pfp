@@ -68,9 +68,14 @@ height: 100%;
 </head>
 
 <body>
+<div style="width: 200px"> 
+<!-- this div just for demo display --> 
+<label class="dropimage">
+<input title="Drop image or click me" type="file"> 
+</label> 
+</div>
+  
 
-<input type="file" id="imageInput" accept="image/*">
-<div id="stage-container"></div>
 <div id="buttons">
 <button class="btn" onclick="selectFile()">Pilih File</button>
 <button class="btn dl" id="save" data-process-text="Processing..." data-complete-text="Finish!" autocomplete="off">Download</button>
