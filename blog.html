@@ -174,5 +174,22 @@ $(this).button('complete');
 });
 });
 </script>
+
+<!-- Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+const modal = document.querySelector(".modal");
+const openModalBtn = document.querySelector(".open-modal");
+const closeModalBtn = document.querySelector("#close-modal");
+
+openModalBtn.addEventListener("click", function () {
+modal.style.display = "block";
+});
+
+closeModalBtn.addEventListener("click", function () {
+modal.style.display = "none";
+});
+
+</script>
 </body>
 </html>
