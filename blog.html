@@ -119,7 +119,7 @@ width: auto;
 <main>
 <div style="width: 100%">
 <label  for="fileInput" class="dropimage file">
-<input  id="fileInput" title="Drop image or click me" type="file" accept="image/*"> 
+<input  id="fileInput" title="Drop image or click me" type="file" oninput="checkInput()" accept="image/*"> 
 </label> 
 </div>
 
@@ -181,15 +181,20 @@ $(this).button('complete');
 const modal = document.querySelector(".modal");
 const openModalBtn = document.querySelector(".open-modal");
 const closeModalBtn = document.querySelector("#close-modal");
-
 openModalBtn.addEventListener("click", function () {
 modal.style.display = "block";
 });
-
 closeModalBtn.addEventListener("click", function () {
 modal.style.display = "none";
 });
+</script>
 
+<script>
+function checkInput() {
+var input = document.getElementById('fileInput').value;
+var button = document.getElementById('click');
+button.disabled = input === '';
+}
 </script>
 </body>
 </html>
