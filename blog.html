@@ -72,11 +72,6 @@ width: 100%
 height: auto;
 }
 
-.profile { 
-border-radius: 50%; /* Make it a circle */ 
-padding-bottom: 100%; /* 100% height (ratio 1) */ 
-}
-
 .file {
 margin: 0 auto;        /* Center horizontally */
 width: 100%;            /* 100% width */
@@ -103,10 +98,8 @@ width: auto;
 
 <p>
 <button class="btn" role="button" onclick="generateTwibbon()">BUAT</button>
-<button id="click" class="dl" role="button" onclick="downloadImage()">UNDUH</button>
+<button class="dl" role="button" onclick="downloadImage()">UNDUH</button>
 </p>
-<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
-<canvas id="displayCanvas"></canvas>
 </main>
   
 <script src="js/app.js"></script>
