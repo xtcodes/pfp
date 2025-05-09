@@ -126,6 +126,26 @@ width: auto;
 <p>
 <button class="btn open-modal" role="button" id="click" onclick="generateTwibbon()" disabled>BUAT TWIBBON</button>
 </p>
+
+<div class="modal">
+<div class="modal-content">
+<div class="modal-header">
+<!--<span id="close-modal">&times;</span>-->
+<h3>TWIBBON TOOLS</h3>
+</div>
+<div class="modal-body">
+<p>
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="500" height="500"></canvas>
+</p>
+<p>
+<button class="dl" role="button" onclick="downloadImage()">UNDUH TWIBBON</button>
+<button class="btn" role="button" id="close-modal">GANTI PHOTO</button>
+</p>
+</div>
+</div>
+</div>
+  
 </main>
   
 <script src="js/app.js"></script>
