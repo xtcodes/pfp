@@ -9,13 +9,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
 <style type="text/css">
 body {
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #fdfdff;
+}
+
+main {
 width: 600px;
 margin: 5em auto;
 padding: 2em;
 overflow: hidden;
 background-color: #fdfdff;
 }
-
+  
 input[type="file"] {
 display: none;
 }
@@ -77,7 +84,7 @@ padding-bottom: 100%; /* 100% height (ratio 1) */
 }
   
 @media (max-width: 700px) {
-body {
+main {
 margin: 0 auto;
 width: auto;
 }
@@ -86,6 +93,8 @@ width: auto;
 </head>
 
 <body>
+  
+<main>
 <div style="width: 100%">
 <label  for="fileInput" class="dropimage">
 <input  id="fileInput" title="Drop image or click me" type="file" accept="image/*"> 
@@ -93,7 +102,8 @@ width: auto;
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </label> 
 </div>
-
+</main>
+  
 <script src="js/app.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
