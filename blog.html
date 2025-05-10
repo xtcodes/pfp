@@ -43,32 +43,24 @@ width: auto;
 <body>
  
 <main>
-<div style="width: 100%">
+<div>
 <label  for="fileInput" class="dropimage file">
 <input  id="fileInput" title="Drop image or click me" type="file" oninput="checkInput()" accept="image/*"> 
 </label> 
 </div>
 
 <p>
-<button class="btn open-modal" role="button" id="click" onclick="generateTwibbon()" disabled>BUAT TWIBBON</button>
+<button class="btn" role="button" id="click" onclick="generateTwibbon()" disabled>BUAT TWIBBON</button>
 </p>
 
-<div class="modal">
-<div class="modal-content">
-<div class="modal-header">
-</div>
-<div class="modal-body">
 <p>
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500"></canvas>
 </p>
+ 
 <p>
 <button class="dl" role="button" onclick="downloadImage()">UNDUH TWIBBON</button>
-<button class="btn" role="button" id="close-modal">GANTI PHOTO</button>
 </p>
-</div>
-</div>
-</div>
 
 </main>
   
