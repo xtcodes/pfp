@@ -10,86 +10,34 @@
 <link rel="stylesheet" href="css/btn.css">
 <style type="text/css">
 body {
+background-color: #f0f0f2;
 margin: 0;
 padding: 0;
-/*overflow: hidden;*/
-background-color: #fdfdff;
+font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;        
 }
 main {
 width: 600px;
 margin: 5em auto;
 padding: 2em;
-/*overflow: hidden;*/
 background-color: #fdfdff;
-} 
-input[type="file"] {
-display: none;
-}  
-button[onclick*="()"] {
-cursor: pointer;
-}  
-#buttons {
-position: absolute;
-bottom: 5px;
-right: 10px;
+border-radius: 0.5em;
+box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
 }
-#buttons > input {
-padding: 10px;
-display: block;
-margin-bottom: 5px;
-}
-img, canvas {
-width: 100%;
-height: auto;
+a:link, a:visited {
+color: #38488f;
+text-decoration: none;
 }
 .file {
 margin: 0 auto;        /* Center horizontally */
 width: 100%;            /* 100% width */
 padding-bottom: 100%;   /* 100% height */
 }  
-.modal {
-display: none;
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.2);
-}
-.modal-content {
-margin: 20px auto;
-width: 100%;
-background-color: #fff;
-padding: 20px;
-animation: scale 0.5s ease;
-box-shadow: 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.02),
-22.3px 22.3px 17.9px rgba(0, 0, 0, 0.03),
-100px 100px 80px rgba(0, 0, 0, 0.05);
-}
-.modal-body {
-margin-top: 5px;
-}
-#close-modal {
-float: right;
-/*font-size: 1.2rem;
-font-weight: bold;*/
-cursor: pointer;
-}
-
-@keyframes scale {
-from {
-transform: scale(0);
-}
-to {
-transform: scale(1);
-}
-}
 @media (max-width: 700px) {
 main {
 margin: 0 auto;
 width: auto;
 }
-} 
+}
 </style>    
 </head>
 <body>
