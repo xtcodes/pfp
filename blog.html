@@ -65,7 +65,7 @@ width: auto;
 <button class="dl" role="button" onclick="downloadImage()">UNDUH TWIBBON</button> 
 </p>
 
-<p>
+<p id="hide">
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500">Sorry, your browser does not support canvas.</canvas>
 </p>
@@ -92,6 +92,11 @@ reader.readAsDataURL(e.target.files[0]);
 });
 });
 </script>
-  
+<!-- hide -->
+<script>
+function showmessage() {
+document.getElementById("hide").innerHTML = "Hello World!";
+}
+</script>
 </body>
 </html>
