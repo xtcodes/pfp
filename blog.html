@@ -51,13 +51,20 @@ width: auto;
 }
 }
 </style>    
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#show").click(function(){
+$("#none").hide();
+});
+});
+</script>
 </head>
 <body>
  
 <main>
 <p><span id="output"></span></p>
-<div>
+<div id="none">
 <label  for="fileInput" class="dropimage file">
 <input  id="fileInput" title="Drop image or click me" type="file" accept="image/*"> 
 </label> 
