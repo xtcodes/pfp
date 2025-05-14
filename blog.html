@@ -64,6 +64,10 @@ $("#none").hide();
  
 <main>
 <p><span id="output"></span></p>
+<p id="cvs" style="display: none;">
+<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
+<canvas id="displayCanvas" width="500" height="500">Sorry, your browser does not support canvas.</canvas>
+</p>
 <div id="none">
 <label  for="fileInput" class="dropimage file">
 <input  id="fileInput" title="Drop image or click me" type="file" accept="image/*"> 
@@ -75,10 +79,6 @@ $("#none").hide();
 <button class="dl" role="button" onclick="downloadImage()">UNDUH TWIBBON</button> 
 </p>
 
-<p id="cvs" style="display: none;">
-<canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
-<canvas id="displayCanvas" width="500" height="500">Sorry, your browser does not support canvas.</canvas>
-</p>
 <!-- 
 <p>
 <button class="dl" role="button" onclick="downloadImage()">UNDUH TWIBBON</button> 
