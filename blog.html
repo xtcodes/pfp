@@ -51,31 +51,24 @@ width: auto;
 }
 }
 </style>    
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function(){
-$("#hide").click(function(){
-$("#none").hide();
-});
-});
-</script>
+
 </head>
 <body>
  
 <main>
 <p><span id="output"></span></p>
-<div id="none">
+<div>
 <label  for="fileInput" class="dropimage file">
 <input  id="fileInput" title="Drop image or click me" type="file" accept="image/*"> 
 </label> 
 </div>
 
 <p>
-<button class="btn" id="hide" role="button" onclick="generateTwibbon()">BUAT TWIBBON</button>
+<button class="btn" id="show" role="button" onclick="generateTwibbon()">BUAT TWIBBON</button>
 <button class="dl" role="button" onclick="downloadImage()">UNDUH TWIBBON</button> 
 </p>
 
-<p>
+<p id="cvs">
 <canvas id="canvas" width="1024" height="1024" style="display: none;"></canvas>
 <canvas id="displayCanvas" width="500" height="500">Sorry, your browser does not support canvas.</canvas>
 </p>
@@ -104,9 +97,11 @@ reader.readAsDataURL(e.target.files[0]);
 </script>
 <!-- hide -->
 <script>
-function showmessage() {
-document.getElementById("hide").innerHTML = "Sorry, your browser does not support canvas.";
-}
+const showImageButton = document.getElementById("show");
+const myImage = document.getElementById("cvs"); 
+showImageButton.addEventListener("click", () => { 
+myImage.style.display = "block"; 
+});
 </script>
 </body>
 </html>
