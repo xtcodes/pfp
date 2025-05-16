@@ -72,13 +72,13 @@ $("#none").hide();
  
 <p id="none">
 <label  for="fileInput" class="dropimage file">
-<input  id="fileInput" title="Drop image or click me" type="file" accept="image/*"> 
+<input  id="fileInput" title="Drop image or click me" type="file" oninput="checkInput()" accept="image/*"> 
 </label> 
 </p>
 
 <p>
 <button class="btn" id="show" role="button" onclick="generateTwibbon()">BUAT</button>
-<button class="dl" role="button" onclick="downloadImage()">UNDUH</button> 
+<button class="dl" id="dl" role="button" onclick="downloadImage()" disabled>UNDUH</button> 
 </p>
 
 </main>
@@ -107,6 +107,15 @@ const myCanvas = document.getElementById("cvs");
 showCanvas.addEventListener("click", () => { 
 myCanvas.style.display = "block"; 
 });
+</script>
+<!-- input check -->
+
+<script>
+function checkInput() {
+var input = document.getElementById('fileInput').value;
+var button = document.getElementById('dl');
+button.disabled = input === '';
+}
 </script>
 </body>
 </html>
